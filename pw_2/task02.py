@@ -19,4 +19,6 @@ resource = 'https://hh.ru'
 req_params = '/search/vacancy?area=1&fromSearchLine=true&st=searchVacancy&text=Python&from=suggest_post'
 response = requests.get(resource + req_params, headers=headers)
 dom = bs(response.text, 'html.parser')
-pprint(dom)
+abra_kadabra = dom.findAll('div', {'data-qa': 'vacancy-serp__vacancy'})
+print(len(abra_kadabra))
+print(abra_kadabra)

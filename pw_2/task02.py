@@ -34,18 +34,27 @@ for val in data_list:
     links.append(val.find('span').find('a').get('href'))
     vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
     compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
+    # print(compensation)
     if compensation:
         for offered_sum in compensation:
             magic_stick = []
+            # try:
             if 'руб' in offered_sum.text.lower():
-                print(offered_sum.text[-4:-1])
+                salary.append(offered_sum.text[-4:-1])
             else:
-                print(offered_sum.text[-3:])
-
+                salary.append(offered_sum.text[-3:])
+            # finally:
+            #     salary.append(magic_stick)
     else:
         salary.append(None)
 
 pprint(len(salary))
 pprint(len(links))
 pprint(len(vacancy))
-# pprint(salary)
+mega_list = []
+for i in range(len(vacancy)):
+    mega_list.append(vacancy[i])
+    mega_list.append(links[i])
+    mega_list.append(salary[i])
+
+pprint(mega_list)

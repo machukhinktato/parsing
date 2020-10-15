@@ -18,7 +18,8 @@ params = {
     'fromSearchLine': 'true',
     'st': 'searchVacancy',
     'text': 'python',
-    'from': 'suggest_post'
+    'from': 'suggest_post',
+    # 'experience': 'noExperience',
 }
 
 resource = 'https://hh.ru'
@@ -26,26 +27,25 @@ req_params = '/search/vacancy'
 response = requests.get(resource + req_params, params=params, headers=headers)
 soup = bs(response.text, 'html.parser')
 
-for result in soup:
-    compensation_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
-    vacancies_list = soup.findAll('a', {'data-qa': 'vacancy-serp__vacancy-title'})
-# pprint(vacancies_list)
-# soup.
-pprint(compensation_list)
-for val in compensation_list:
-    # pprint(type(val))
+# for result in soup:
+data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
+salary, links, vacancy = [], [], []
+for val in data_list:
+    links.append(val.find('span').find('a').get('href'))
+    vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
+    compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
+    if compensation:
+        for offered_sum in compensation:
+            magic_stick = []
+            if 'руб' in offered_sum.text.lower():
+                print(offered_sum.text[-4:-1])
+            else:
+                print(offered_sum.text[-3:])
 
-    #как найти ссылку
-    links = val.find('span').find('a').get('href')
-    pprint(links)
-    # pprint(type(i))
-    # print(i.get('href'))
-# worker_compensation, vacancy_name, links = [], [], []
-# for compensation in compensation_list:
-#     worker_compensation.append(compensation.text.lower())
-# for vacancy in vacancies_list:
-#     vacancy_name.append(vacancy.text.lower())
-#     links.append(vacancy.get('href'))
-# print(worker_compensation)
-# print(vacancy_name)
-# pprint(links)
+    else:
+        salary.append(None)
+
+pprint(len(salary))
+pprint(len(links))
+pprint(len(vacancy))
+# pprint(salary)

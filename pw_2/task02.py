@@ -37,24 +37,32 @@ for val in data_list:
     # print(compensation)
     if compensation:
         for offered_sum in compensation:
-            magic_stick = []
-            # try:
             if 'руб' in offered_sum.text.lower():
+                # print(offered_sum.text)
+                for result in offered_sum:
+                    if '-' in result:
+                        result = result.split('-')
+                        for loop in range(len(result)):
+                            start, end = result[0], result[1]
+                            # print(result)
+                            # print(f'{start}, {end}')
+
+                        # if letter.isdigit():
+                        #     print(letter)
                 salary.append(offered_sum.text[-4:-1])
             else:
                 salary.append(offered_sum.text[-3:])
-            # finally:
-            #     salary.append(magic_stick)
     else:
         salary.append(None)
 
 pprint(len(salary))
 pprint(len(links))
 pprint(len(vacancy))
-mega_list = []
+mega_list = {}
 for i in range(len(vacancy)):
-    mega_list.append(vacancy[i])
-    mega_list.append(links[i])
-    mega_list.append(salary[i])
+    mega_list.setdefault(vacancy[i], [salary[i], links[i]])
+    # mega_list.append(vacancy[i])
+    # mega_list.append(links[i])
+    # mega_list.append(salary[i])
 
-pprint(mega_list)
+# pprint(mega_list)

@@ -43,10 +43,17 @@ for val in data_list:
                     if '-' in result:
                         result = result.split('-')
                         for loop in range(len(result)):
-                            start, end = result[0], result[1]
+                            start, end = result[0], result[1][:-4]
                             # print(result)
                             # print(f'{start}, {end}')
-
+                    elif 'от' in result:
+                        start, end = result[:-4], None
+                        # print(f'{start}, {end}')
+                    elif 'до' in result:
+                        start, end = None, result
+                        print(f'{start}, {end}')
+                    else:
+                        start, end = None
                         # if letter.isdigit():
                         #     print(letter)
                 salary.append(offered_sum.text[-4:-1])

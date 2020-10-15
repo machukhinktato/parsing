@@ -47,11 +47,19 @@ for val in data_list:
                             # print(result)
                             # print(f'{start}, {end}')
                     elif 'от' in result:
-                        start, end = result[:-4], None
+                        start, end = result[3:-4], None
                         # print(f'{start}, {end}')
                     elif 'до' in result:
-                        start, end = None, result
-                        print(f'{start}, {end}')
+                        start, end = None, result[3:-4]
+                        endz = []
+                        for i in end:
+                            if i.isdecimal():
+                                endz.append(''.join(i))
+                                for i in endz:
+                                    int(i)
+                        a = ''.join(endz)
+                        print(type(int(a)))
+                        # print(f'{start}, {float(end)}')
                     else:
                         start, end = None
                         # if letter.isdigit():

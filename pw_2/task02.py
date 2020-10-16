@@ -45,39 +45,38 @@ params = {
     'text': vacancy_pick,
     'from': 'suggest_post',
     # 'experience': 'noExperience',
+    'page': 0,
 }
+for page_number in range(40):
+    resource = 'https://hh.ru'
+    req_params = '/search/vacancy'
+    response = requests.get(resource + req_params, params=params, headers=headers)
+    soup = bs(response.text, 'html.parser')
+    data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
+    salary, links, vacancy = [], [], []
+    for val in data_list:
+        links.append(val.find('span').find('a').get('href'))
+        vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
+        compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
+        start, end, unit = None, None, None
+        all_cats = []
+        if compensation:
+            for offered_sum in compensation:
+                start, end = value_delimitter(offered_sum)
+                if 'руб' in offered_sum.text.lower():
+                    unit = 'руб'
+                elif 'usd' in offered_sum.text.lower():
+                    unit = 'usd'
+                else:
+                    unit = 'eur'
+        all_cats.append(start)
+        all_cats.append(end)
+        all_cats.append(unit)
+        salary.append(all_cats)
+    mega_list = {}
+    for i in range(len(vacancy)):
+        mega_list.setdefault(vacancy[i], [salary[i], links[i]])
+    params['page'] += 1
+    with open('task02.json', 'w', encoding='utf-8') as f:
+        json.dump(mega_list, f, indent=2, ensure_ascii=False)
 
-resource = 'https://hh.ru'
-req_params = '/search/vacancy'
-response = requests.get(resource + req_params, params=params, headers=headers)
-soup = bs(response.text, 'html.parser')
-
-# for result in soup:
-data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
-salary, links, vacancy = [], [], []
-for val in data_list:
-    links.append(val.find('span').find('a').get('href'))
-    vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
-    compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
-    start, end, unit = None, None, None
-    all_cats = []
-    if compensation:
-        for offered_sum in compensation:
-            start, end = value_delimitter(offered_sum)
-            if 'руб' in offered_sum.text.lower():
-                unit = 'руб'
-            elif 'usd' in offered_sum.text.lower():
-                unit = 'usd'
-            else:
-                unit = 'eur'
-    all_cats.append(start)
-    all_cats.append(end)
-    all_cats.append(unit)
-    salary.append(all_cats)
-mega_list = {}
-for i in range(len(vacancy)):
-    mega_list.setdefault(vacancy[i], [salary[i], links[i]])
-
-with open('task02.json', 'w', encoding='utf-8') as f:
-    json.dump(mega_list, f, indent=2, ensure_ascii=False)
-pprint(mega_list)

@@ -47,7 +47,10 @@ for val in data_list:
     compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
     # print(compensation)
     if compensation:
+        start, end, unit = None, None, None
         for offered_sum in compensation:
+            all_cats = []
+            # start, end, unit = None, None, None
             if 'руб' in offered_sum.text.lower():
                 unit = 'руб'
                 # print(offered_sum.text)
@@ -57,20 +60,36 @@ for val in data_list:
                         # for loop in range(len(result)):
                         start, end = int_maker(result[0]), int_maker(result[1][:-4])
                         # print(result)
-                        print(f'{start}, {end}, {unit}')
+                        # print(f'{start}, {end}, {unit}')
                     elif 'от' in result:
                         start, end = int_maker(result[3:-4]), None
                         # print(f'{start}, {end}')
                     elif 'до' in result:
                         start, end = None, int_maker(result[3:-4])
-                        start, end = None
+                        # start, end = None
+                all_cats.append(start)
+                all_cats.append(end)
+                all_cats.append(unit)
+                salary.append(all_cats)
             elif 'usd' in result:
+
                 unit = 'usd'
+                all_cats.append(start)
+                all_cats.append(end)
+                all_cats.append(unit)
+                salary.append(all_cats)
             else:
-                unit = 'eur'
-            salary.append(offered_sum.text[-4:-1])
-        else:
-            salary.append(offered_sum.text[-3:])
+                all_cats.append(start)
+                all_cats.append(end)
+                all_cats.append(unit)
+                salary.append(all_cats)
+            # salary.append(offered_sum.text[-4:-1])
+    else:
+
+        all_cats.append(start)
+        all_cats.append(end)
+        all_cats.append(unit)
+        salary.append(all_cats)
 else:
     salary.append(None)
 
@@ -89,3 +108,4 @@ for i in range(len(vacancy)):
 # for i in endz:
 #     int(i)
 # a = ''.join(endz)
+pprint(salary)

@@ -63,33 +63,17 @@ for val in data_list:
     all_cats = []
     if compensation:
         for offered_sum in compensation:
+            start, end = value_delimitter(offered_sum)
             if 'руб' in offered_sum.text.lower():
                 unit = 'руб'
-                start, end = value_delimitter(offered_sum)
-                all_cats.append(start)
-                all_cats.append(end)
-                all_cats.append(unit)
-                salary.append(all_cats)
             elif 'usd' in offered_sum.text.lower():
                 unit = 'usd'
-                start, end = value_delimitter(offered_sum)
-                all_cats.append(start)
-                all_cats.append(end)
-                all_cats.append(unit)
-                salary.append(all_cats)
             else:
                 unit = 'eur'
-                start, end = value_delimitter(offered_sum)
-                all_cats.append(start)
-                all_cats.append(end)
-                all_cats.append(unit)
-                salary.append(all_cats)
-    else:
-        all_cats.append(start)
-        all_cats.append(end)
-        all_cats.append(unit)
-        salary.append(all_cats)
-
+    all_cats.append(start)
+    all_cats.append(end)
+    all_cats.append(unit)
+    salary.append(all_cats)
 mega_list = {}
 for i in range(len(vacancy)):
     mega_list.setdefault(vacancy[i], [salary[i], links[i]])

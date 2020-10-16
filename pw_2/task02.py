@@ -78,4 +78,6 @@ mega_list = {}
 for i in range(len(vacancy)):
     mega_list.setdefault(vacancy[i], [salary[i], links[i]])
 
+with open('task02.json', 'w', encoding='utf-8') as f:
+    json.dump(mega_list, f, indent=2, ensure_ascii=False)
 pprint(mega_list)

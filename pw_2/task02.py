@@ -6,7 +6,6 @@ import requests
 
 def int_maker(str_value):
     converter, result = [], []
-    # str_value = ['1', '23', '4', '\\xa', '6', '7']
     for value in str_value:
         if value.isdecimal():
             converter.append(value)
@@ -31,7 +30,7 @@ def value_delimitter(compensation):
 
 # https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
 
-# vacancy_pick = input('please, enter vacancy name: ').lower()
+vacancy_pick = input('please, enter vacancy name: ').lower()
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -43,7 +42,7 @@ params = {
     'area': '1',
     'fromSearchLine': 'true',
     'st': 'searchVacancy',
-    'text': 'python',
+    'text': vacancy_pick,
     'from': 'suggest_post',
     # 'experience': 'noExperience',
 }
@@ -60,29 +59,13 @@ for val in data_list:
     links.append(val.find('span').find('a').get('href'))
     vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
     compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
-    # print(compensation)
     start, end, unit = None, None, None
     all_cats = []
     if compensation:
         for offered_sum in compensation:
-            # start, end, unit = None, None, None
             if 'руб' in offered_sum.text.lower():
                 unit = 'руб'
                 start, end = value_delimitter(offered_sum)
-                # print(offered_sum.text)
-                # for result in offered_sum:
-                #     if '-' in result:
-                #         result = result.split('-')
-                # for loop in range(len(result)):
-                # start, end = int_maker(result[0]), int_maker(result[1][:-4])
-                # print(result)
-                # print(f'{start}, {end}, {unit}')
-                # elif 'от' in result:
-                #     start, end = int_maker(result[3:-4]), None
-                # print(f'{start}, {end}')
-                # elif 'до' in result:
-                #     start, end = None, int_maker(result[3:-4])
-                # start, end = None
                 all_cats.append(start)
                 all_cats.append(end)
                 all_cats.append(unit)
@@ -106,29 +89,9 @@ for val in data_list:
         all_cats.append(end)
         all_cats.append(unit)
         salary.append(all_cats)
-        # salary.append(offered_sum.text[-4:-1])
-    # else:
-    #
-    #     all_cats.append(start)
-    #     all_cats.append(end)
-    #     all_cats.append(unit)
-    #     salary.append(all_cats)
-# else:
-#     salary.append(None)
 
-pprint(len(salary))
-pprint(len(links))
-pprint(len(vacancy))
-# mega_list = {}
-# for i in range(len(vacancy)):
-#     mega_list.setdefault(vacancy[i], [salary[i], links[i]])
-# mega_list.append(vacancy[i])
-# mega_list.append(links[i])
-# mega_list.append(salary[i])
+mega_list = {}
+for i in range(len(vacancy)):
+    mega_list.setdefault(vacancy[i], [salary[i], links[i]])
 
-# pprint(mega_list)
-
-# for i in endz:
-#     int(i)
-# a = ''.join(endz)
-pprint(salary)
+pprint(mega_list)

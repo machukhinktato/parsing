@@ -63,18 +63,6 @@ for val in data_list:
                         # print(f'{start}, {end}')
                     elif 'до' in result:
                         start, end = None, int_maker(result[3:-4])
-
-                        # for i in end:
-                        #     if i.isdecimal():
-                        #         print(i)
-                        # endz.append(''.join(i))
-                        # for i in endz:
-                        #     int(i)
-                        # / endz.append(''.join(i))
-                        # print(int(endz))
-                        # print(type(int(a)))
-                        # print(f'{start}, {float(end)}')
-                    else:
                         start, end = None
             elif 'usd' in result:
                 unit = 'usd'

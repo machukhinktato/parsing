@@ -103,6 +103,14 @@
     ],
     "https://hh.ru/vacancy/39538528?query=python"
   ],
+  "Python-разработчик (удаленно)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39881639?query=python"
+  ],
   "Python-разработчик (Django, DRF)": [
     [
       60000,
@@ -118,22 +126,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39388485?query=python"
-  ],
-  "Python-разработчик (удаленно)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39881639?query=python"
-  ],
-  "Senior backend developer (C++\\Python)": [
-    [
-      270000,
-      320000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39264973?query=python"
   ],
   "Backend разработчик на python": [
     [
@@ -151,6 +143,14 @@
     ],
     "https://hh.ru/vacancy/39415818?query=python"
   ],
+  "Senior backend developer (C++\\Python)": [
+    [
+      270000,
+      320000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39264973?query=python"
+  ],
   "Python разработчик (Django)": [
     [
       100000,
@@ -158,14 +158,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39844911?query=python"
-  ],
-  "Методист курса программирования на Python": [
-    [
-      60000,
-      80000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39895607?query=python"
   ],
   "Web-разработчик (Python/ReactJS)": [
     [
@@ -175,21 +167,13 @@
     ],
     "https://hh.ru/vacancy/39882112?query=python"
   ],
-  "Middle Разработчик Python / Django удалённо": [
+  "Методист курса программирования на Python": [
     [
       60000,
-      140000,
+      80000,
       "руб"
     ],
-    "https://hh.ru/vacancy/39769884?query=python"
-  ],
-  "Разработчик автоматических тестов GUI (Python, Squish)": [
-    [
-      3000,
-      null,
-      "usd"
-    ],
-    "https://hh.ru/vacancy/38036578?query=python"
+    "https://hh.ru/vacancy/39895607?query=python"
   ],
   "BackEnd-разработчик (Python)": [
     [
@@ -198,6 +182,14 @@
       null
     ],
     "https://hh.ru/vacancy/39272567?query=python"
+  ],
+  "Middle Разработчик Python / Django удалённо": [
+    [
+      60000,
+      140000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39769884?query=python"
   ],
   "Тестировщик/Web-программист": [
     [
@@ -215,13 +207,13 @@
     ],
     "https://hh.ru/vacancy/39730720?query=python"
   ],
-  "Data Engineer (Data Science)": [
+  "Разработчик автоматических тестов GUI (Python, Squish)": [
     [
+      3000,
       null,
-      null,
-      null
+      "usd"
     ],
-    "https://hh.ru/vacancy/39876540?query=python"
+    "https://hh.ru/vacancy/38036578?query=python"
   ],
   "Разработчик (Python)": [
     [
@@ -247,6 +239,14 @@
     ],
     "https://hh.ru/vacancy/39701802?query=python"
   ],
+  "Data Engineer (Data Science)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39876540?query=python"
+  ],
   "Программист Python \\ ГИС": [
     [
       115000,
@@ -262,14 +262,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39779033?query=python"
-  ],
-  "Разработчик Python (на проект)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39909586?query=python"
   ],
   "Python middle developer": [
     [
@@ -319,13 +311,13 @@
     ],
     "https://hh.ru/vacancy/39860865?query=python"
   ],
-  "Backend программист (Python)": [
+  "Разработчик Python (на проект)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38845851?query=python"
+    "https://hh.ru/vacancy/39909586?query=python"
   ],
   "Разработчик на Python (Full stack)": [
     [
@@ -343,14 +335,6 @@
     ],
     "https://hh.ru/vacancy/39539087?query=python"
   ],
-  "Python разработчик SberDevices": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/36286016?query=python"
-  ],
   "Python (Django) разработчик": [
     [
       100000,
@@ -358,6 +342,22 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39722392?query=python"
+  ],
+  "Backend программист (Python)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38845851?query=python"
+  ],
+  "Python разработчик SberDevices": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/36286016?query=python"
   ],
   "Python Django developer": [
     [
@@ -495,6 +495,14 @@
     ],
     "https://hh.ru/vacancy/39570700?query=python"
   ],
+  "Тестировщик ПО": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39411077?query=python"
+  ],
   "Python разработчик/Ведущий Python разработчик": [
     [
       null,
@@ -502,14 +510,6 @@
       null
     ],
     "https://hh.ru/vacancy/39385647?query=python"
-  ],
-  "Python Django разработчик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39020203?query=python"
   ],
   "Fullstack-разработчик (Python/React)": [
     [
@@ -527,13 +527,13 @@
     ],
     "https://hh.ru/vacancy/39487426?query=python"
   ],
-  "Тестировщик ПО": [
+  "Python Django разработчик": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39411077?query=python"
+    "https://hh.ru/vacancy/39020203?query=python"
   ],
   "Автор курсов по Python": [
     [
@@ -607,14 +607,6 @@
     ],
     "https://hh.ru/vacancy/39065770?query=python"
   ],
-  "Python Developer (DM & AdHoc)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39307004?query=python"
-  ],
   "Разработчик Python 2.7 (3.Х)": [
     [
       null,
@@ -622,6 +614,14 @@
       null
     ],
     "https://hh.ru/vacancy/39439491?query=python"
+  ],
+  "Python Developer (DM & AdHoc)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39307004?query=python"
   ],
   "Разработчик Python/Openstack": [
     [
@@ -719,6 +719,14 @@
     ],
     "https://hh.ru/vacancy/39893246?query=python"
   ],
+  "Python-разработчик DE": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39584768?query=python"
+  ],
   "Code reviewer (Python)": [
     [
       null,
@@ -734,14 +742,6 @@
       null
     ],
     "https://hh.ru/vacancy/39762329?query=python"
-  ],
-  "Python-разработчик DE": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39584768?query=python"
   ],
   "Программист Python(Django)": [
     [
@@ -1567,14 +1567,6 @@
     ],
     "https://hh.ru/vacancy/37386847?query=python"
   ],
-  "Data-Scientist": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39801957?query=python"
-  ],
   "Веб-разработчик": [
     [
       70000,
@@ -1582,6 +1574,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39714356?query=python"
+  ],
+  "Data-Scientist": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39801957?query=python"
   ],
   "Senior Python backend developer (USA company)": [
     [
@@ -1959,14 +1959,6 @@
     ],
     "https://hh.ru/vacancy/39551378?query=python"
   ],
-  "Senior Data Engineer (Python, AWS)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38577257?query=python"
-  ],
   "Senior разработчик (Scala/Python)": [
     [
       null,
@@ -1998,6 +1990,14 @@
       null
     ],
     "https://hh.ru/vacancy/38590175?query=python"
+  ],
+  "Senior Data Engineer (Python, AWS)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38577257?query=python"
   ],
   "QA Automation Lead": [
     [
@@ -2095,14 +2095,6 @@
     ],
     "https://hh.ru/vacancy/39387309?query=python"
   ],
-  "Преподаватель по программированию (Python / Scratch / Minecraft / Unity)": [
-    [
-      15000,
-      60000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39868404?query=python"
-  ],
   "Senior QA automation engineer/Ведущий инженер по автоматизации тестирования": [
     [
       null,
@@ -2110,6 +2102,14 @@
       null
     ],
     "https://hh.ru/vacancy/39107899?query=python"
+  ],
+  "Преподаватель по программированию (Python / Scratch / Minecraft / Unity)": [
+    [
+      15000,
+      60000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39868404?query=python"
   ],
   "DevOps engineer": [
     [
@@ -2127,14 +2127,6 @@
     ],
     "https://hh.ru/vacancy/32333890?query=python"
   ],
-  "Code reviewer (JavaScript)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39873087?query=python"
-  ],
   "Системный программист (OS Linux, встраиваемые системы)": [
     [
       null,
@@ -2142,6 +2134,14 @@
       null
     ],
     "https://hh.ru/vacancy/39494315?query=python"
+  ],
+  "Code reviewer (JavaScript)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39873087?query=python"
   ],
   "Веб-аналитик": [
     [
@@ -2263,14 +2263,6 @@
     ],
     "https://hh.ru/vacancy/39709039?query=python"
   ],
-  "Senior Blockchain Developer (Solidity / Python / Javascript)": [
-    [
-      100000,
-      250000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39873392?query=python"
-  ],
   "Программист": [
     [
       120000,
@@ -2278,6 +2270,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39865166?query=python"
+  ],
+  "Senior Blockchain Developer (Solidity / Python / Javascript)": [
+    [
+      100000,
+      250000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39873392?query=python"
   ],
   "BI Engineer": [
     [
@@ -2551,14 +2551,6 @@
     ],
     "https://hh.ru/vacancy/39179612?query=python"
   ],
-  "Разработчик JavaScript (Node.js Back-end)": [
-    [
-      120000,
-      200000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/38820488?query=python"
-  ],
   "Head of Data science": [
     [
       null,
@@ -2582,6 +2574,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39882107?query=python"
+  ],
+  "Разработчик JavaScript (Node.js Back-end)": [
+    [
+      120000,
+      200000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/38820488?query=python"
   ],
   "Преподаватель на курс по теории вероятностей и математической статистике": [
     [
@@ -2655,14 +2655,6 @@
     ],
     "https://hh.ru/vacancy/39174316?query=python"
   ],
-  "Senior Data engineer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39551277?query=python"
-  ],
   "PHP-программист (Backend-разработчик)": [
     [
       100000,
@@ -2679,13 +2671,13 @@
     ],
     "https://hh.ru/vacancy/39874546?query=python"
   ],
-  "Software Development Engineer in Test (Инженер-программист по автоматизированному тестированию)": [
+  "Senior Data engineer": [
     [
-      3500,
       null,
-      "usd"
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39389658?query=python"
+    "https://hh.ru/vacancy/39551277?query=python"
   ],
   "Программист-математик": [
     [
@@ -2710,6 +2702,14 @@
       null
     ],
     "https://hh.ru/vacancy/39348426?query=python"
+  ],
+  "Software Development Engineer in Test (Инженер-программист по автоматизированному тестированию)": [
+    [
+      3500,
+      null,
+      "usd"
+    ],
+    "https://hh.ru/vacancy/39389658?query=python"
   ],
   "Data scientist (Центр развития платформы Sber.DS)": [
     [
@@ -3039,14 +3039,6 @@
     ],
     "https://hh.ru/vacancy/39294798?query=python"
   ],
-  "Старший ML разработчик (CV, NLP)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39763617?query=python"
-  ],
   "Разработчик C++ в команду видео-инфраструктуры (backend)": [
     [
       null,
@@ -3078,6 +3070,14 @@
       null
     ],
     "https://hh.ru/vacancy/39413894?query=python"
+  ],
+  "Старший ML разработчик (CV, NLP)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39763617?query=python"
   ],
   "Бизнес-аналитик (web and mobile)": [
     [
@@ -3143,14 +3143,6 @@
     ],
     "https://hh.ru/vacancy/39596638?query=python"
   ],
-  "Инженер по автоматизации тестирования (фаззинг)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39863919?query=python"
-  ],
   "DevOps Engineer (Kubernetes)": [
     [
       null,
@@ -3167,14 +3159,6 @@
     ],
     "https://hh.ru/vacancy/39707158?query=python"
   ],
-  "Тестировщик ПО/QA": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39866977?query=python"
-  ],
   "QA инженер / Тестировщик ПО": [
     [
       80000,
@@ -3182,6 +3166,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39873852?query=python"
+  ],
+  "Инженер по автоматизации тестирования (фаззинг)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39863919?query=python"
   ],
   "Инженер-математик": [
     [
@@ -3198,6 +3190,14 @@
       null
     ],
     "https://hh.ru/vacancy/39865117?query=python"
+  ],
+  "Тестировщик ПО/QA": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39866977?query=python"
   ],
   "Системный администратор Linux (remote)": [
     [
@@ -3359,14 +3359,6 @@
     ],
     "https://hh.ru/vacancy/39620097?query=python"
   ],
-  "Django разработчик": [
-    [
-      150000,
-      250000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39852480?query=python"
-  ],
   "Back-End Developer": [
     [
       2000,
@@ -3390,6 +3382,14 @@
       null
     ],
     "https://hh.ru/vacancy/39353842?query=python"
+  ],
+  "Django разработчик": [
+    [
+      150000,
+      250000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39852480?query=python"
   ],
   "Программист-разработчик": [
     [
@@ -3543,6 +3543,14 @@
     ],
     "https://hh.ru/vacancy/39757454?query=python"
   ],
+  "Сетевой DevOps-инженер (Автоматизация)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39883845?query=python"
+  ],
   "Аналитик данных/ Data Scientist/ разработчик": [
     [
       null,
@@ -3558,22 +3566,6 @@
       null
     ],
     "https://hh.ru/vacancy/39106979?query=python"
-  ],
-  "Сетевой DevOps-инженер (Автоматизация)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39883845?query=python"
-  ],
-  "Инженер по тестированию/QA": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38300163?query=python"
   ],
   "QA Team Lead/Ведущий тестировщик (автоматизированное)": [
     [
@@ -3598,6 +3590,14 @@
       null
     ],
     "https://hh.ru/vacancy/39453574?query=python"
+  ],
+  "Инженер по тестированию/QA": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38300163?query=python"
   ],
   "Системный администратор Linux/DevOps": [
     [
@@ -3655,14 +3655,6 @@
     ],
     "https://hh.ru/vacancy/39879139?query=python"
   ],
-  "Стажер SAP BI/BW (поддержка)": [
-    [
-      null,
-      35000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/35433946?query=python"
-  ],
   "Ведущий инженер по тестированию (GeekBrains)": [
     [
       null,
@@ -3678,6 +3670,14 @@
       null
     ],
     "https://hh.ru/vacancy/39401776?query=python"
+  ],
+  "Стажер SAP BI/BW (поддержка)": [
+    [
+      null,
+      35000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/35433946?query=python"
   ],
   "Инженер внедрения ИТ-решений": [
     [
@@ -3759,14 +3759,6 @@
     ],
     "https://hh.ru/vacancy/39876702?query=python"
   ],
-  "Senior developer c++": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39620502?query=python"
-  ],
   "Data & Business Analyst": [
     [
       null,
@@ -3806,6 +3798,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39720277?query=python"
+  ],
+  "Senior developer c++": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39620502?query=python"
   ],
   "Team Lead/Senior Data Scientist": [
     [
@@ -3847,14 +3847,6 @@
     ],
     "https://hh.ru/vacancy/39239545?query=python"
   ],
-  "Data science (кредитные риски)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38860004?query=python"
-  ],
   "Linux инженер": [
     [
       null,
@@ -3879,6 +3871,14 @@
     ],
     "https://hh.ru/vacancy/35594122?query=python"
   ],
+  "Data science (кредитные риски)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38860004?query=python"
+  ],
   "Backend developer senior": [
     [
       null,
@@ -3895,14 +3895,6 @@
     ],
     "https://hh.ru/vacancy/37925375?query=python"
   ],
-  "Hadoop data engineer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39851265?query=python"
-  ],
   "IP Network Engineer / Инженер сети": [
     [
       140000,
@@ -3910,6 +3902,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39587230?query=python"
+  ],
+  "Hadoop data engineer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39851265?query=python"
   ],
   "Руководитель группы Data инженеров (Chief Data Engineer)": [
     [
@@ -3967,14 +3967,6 @@
     ],
     "https://hh.ru/vacancy/38722315?query=python"
   ],
-  "Системный аналитик DWH (Hadoop)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39870723?query=python"
-  ],
   "Senior Product / Data Analyst": [
     [
       200000,
@@ -4015,6 +4007,14 @@
     ],
     "https://hh.ru/vacancy/38457500?query=python"
   ],
+  "Системный аналитик DWH (Hadoop)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39870723?query=python"
+  ],
   "Бизнес-аналитик": [
     [
       160000,
@@ -4054,14 +4054,6 @@
       null
     ],
     "https://hh.ru/vacancy/39879456?query=python"
-  ],
-  "Senior Devops": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37855618?query=python"
   ],
   "Аналитик-разработчик ETL/Data Engineer": [
     [
@@ -4111,6 +4103,14 @@
     ],
     "https://hh.ru/vacancy/39874463?query=python"
   ],
+  "Senior Devops": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37855618?query=python"
+  ],
   "Инженер систем виртуализации и СХД / Системный администратор": [
     [
       75000,
@@ -4118,14 +4118,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39714375?query=python"
-  ],
-  "QA Automation Engineer (WCRM+Chat-bot)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39872167?query=python"
   ],
   "Web аналитик": [
     [
@@ -4142,6 +4134,14 @@
       null
     ],
     "https://hh.ru/vacancy/39490636?query=python"
+  ],
+  "QA Automation Engineer (WCRM+Chat-bot)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39872167?query=python"
   ],
   "Ведущий QA Инженер": [
     [
@@ -4182,14 +4182,6 @@
       null
     ],
     "https://hh.ru/vacancy/39359090?query=python"
-  ],
-  "Стажер-разработчик в команду подготовки данных Яндекс.Дзен": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39390775?query=python"
   ],
   "Data Mining Specialist / Data Scientist в департамент экосистемных продуктов": [
     [
@@ -4351,14 +4343,6 @@
     ],
     "https://hh.ru/vacancy/39416083?query=python"
   ],
-  "Senior Linux Engineer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39267354?query=python"
-  ],
   "Младший системный администратор": [
     [
       100000,
@@ -4383,6 +4367,14 @@
     ],
     "https://hh.ru/vacancy/39860407?query=python"
   ],
+  "Senior Linux Engineer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39267354?query=python"
+  ],
   "Старший системный администратор UNIX/LINUX": [
     [
       null,
@@ -4390,14 +4382,6 @@
       null
     ],
     "https://hh.ru/vacancy/39381871?query=python"
-  ],
-  "QA Engineer (Automation QA Engineer)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/36585559?query=python"
   ],
   "Software Architect": [
     [
@@ -4407,13 +4391,13 @@
     ],
     "https://hh.ru/vacancy/39589690?query=python"
   ],
-  "Старший системный администратор Linux (LiveJournal)": [
+  "QA Engineer (Automation QA Engineer)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39386388?query=python"
+    "https://hh.ru/vacancy/36585559?query=python"
   ],
   "Преподаватель компьютерных IT курсов, программирования, информатики": [
     [
@@ -4430,6 +4414,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39048567?query=python"
+  ],
+  "Старший системный администратор Linux (LiveJournal)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39386388?query=python"
   ],
   "Backend engineer": [
     [
@@ -4543,14 +4535,6 @@
     ],
     "https://hh.ru/vacancy/39802576?query=python"
   ],
-  "Младший системный администратор Linux": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38686287?query=python"
-  ],
   "Исследователь программного обеспечения": [
     [
       null,
@@ -4574,6 +4558,14 @@
       null
     ],
     "https://hh.ru/vacancy/39906868?query=python"
+  ],
+  "Младший системный администратор Linux": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38686287?query=python"
   ],
   "Web-аналитик ( Проект \"Личный кабинет, Checkout\")": [
     [
@@ -4783,14 +4775,6 @@
     ],
     "https://hh.ru/vacancy/39355993?query=python"
   ],
-  "BI аналитик (Tableau)": [
-    [
-      100000,
-      150000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39068463?query=python"
-  ],
   "QA Specialist (автоматизация)": [
     [
       null,
@@ -4815,6 +4799,14 @@
     ],
     "https://hh.ru/vacancy/38734440?query=python"
   ],
+  "BI аналитик (Tableau)": [
+    [
+      100000,
+      150000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39068463?query=python"
+  ],
   "Заместитель руководителя отдела тестирования (десктоп)": [
     [
       null,
@@ -4822,14 +4814,6 @@
       null
     ],
     "https://hh.ru/vacancy/39438332?query=python"
-  ],
-  "Аналитик / Data Scientist": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39860522?query=python"
   ],
   "3D Animator": [
     [
@@ -4839,13 +4823,13 @@
     ],
     "https://hh.ru/vacancy/38945815?query=python"
   ],
-  "Full-stack Developer (.NET Core / Angular)": [
+  "Аналитик / Data Scientist": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39864427?query=python"
+    "https://hh.ru/vacancy/39860522?query=python"
   ],
   "Специалист по защите информации": [
     [
@@ -4878,6 +4862,14 @@
       null
     ],
     "https://hh.ru/vacancy/39398302?query=python"
+  ],
+  "Full-stack Developer (.NET Core / Angular)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39864427?query=python"
   ],
   "Ведущий Data аналитик CRM": [
     [
@@ -4927,14 +4919,6 @@
     ],
     "https://hh.ru/vacancy/37838667?query=python"
   ],
-  "Программист прикладного ПО встраиваемых систем": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38221164?query=python"
-  ],
   "Senior developer": [
     [
       180000,
@@ -4943,22 +4927,6 @@
     ],
     "https://hh.ru/vacancy/39660588?query=python"
   ],
-  "Разработчик DWH / Ведущий data-инженер (инженер по работе с данными)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39278505?query=python"
-  ],
-  "Junior data scientist": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39397993?query=python"
-  ],
   "ETL developer": [
     [
       null,
@@ -4966,6 +4934,14 @@
       null
     ],
     "https://hh.ru/vacancy/39756206?query=python"
+  ],
+  "Программист прикладного ПО встраиваемых систем": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38221164?query=python"
   ],
   "Разработчик web-продуктов (платформа WebTutor)": [
     [
@@ -4983,6 +4959,14 @@
     ],
     "https://hh.ru/vacancy/38825781?query=python"
   ],
+  "Разработчик DWH / Ведущий data-инженер (инженер по работе с данными)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39278505?query=python"
+  ],
   "Ведущий специалист по тестированию ПО": [
     [
       null,
@@ -4990,6 +4974,14 @@
       null
     ],
     "https://hh.ru/vacancy/39838930?query=python"
+  ],
+  "Junior data scientist": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39397993?query=python"
   ],
   "Ведущий разработчик С#": [
     [
@@ -5039,14 +5031,6 @@
     ],
     "https://hh.ru/vacancy/39878905?query=python"
   ],
-  "Ведущий программист (г. Москва)": [
-    [
-      null,
-      150000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39867746?query=python"
-  ],
   "Фулстек разработчик": [
     [
       null,
@@ -5071,13 +5055,13 @@
     ],
     "https://hh.ru/vacancy/38220441?query=python"
   ],
-  "Старший инженер тестирования": [
+  "Ведущий программист (г. Москва)": [
     [
       null,
-      null,
-      null
+      150000,
+      "руб"
     ],
-    "https://hh.ru/vacancy/39859169?query=python"
+    "https://hh.ru/vacancy/39867746?query=python"
   ],
   "Аналитик (отдел эксплуатации средств защиты информации)": [
     [
@@ -5095,14 +5079,6 @@
     ],
     "https://hh.ru/vacancy/37247151?query=python"
   ],
-  "Software Development Engineer in Test (KasperskyOS Education Development Kit)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39869485?query=python"
-  ],
   "Разработчик (антифрод)": [
     [
       null,
@@ -5110,6 +5086,22 @@
       null
     ],
     "https://hh.ru/vacancy/39879485?query=python"
+  ],
+  "Старший инженер тестирования": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39859169?query=python"
+  ],
+  "Software Development Engineer in Test (KasperskyOS Education Development Kit)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39869485?query=python"
   ],
   "DevOps- инженер управления облачных решений": [
     [
@@ -5127,14 +5119,6 @@
     ],
     "https://hh.ru/vacancy/39713885?query=python"
   ],
-  "ETL-разработчик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39870706?query=python"
-  ],
   "Hadoop Developer (Главный программист)": [
     [
       null,
@@ -5151,6 +5135,14 @@
     ],
     "https://hh.ru/vacancy/39469740?query=python"
   ],
+  "ETL-разработчик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39870706?query=python"
+  ],
   "Младший сетевой инженер": [
     [
       90000,
@@ -5158,14 +5150,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39364030?query=python"
-  ],
-  "Security engineer (IDM)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39163253?query=python"
   ],
   "Начальник отдела исследований и моделирования (Казначейство)": [
     [
@@ -5191,6 +5175,14 @@
     ],
     "https://hh.ru/vacancy/36605616?query=python"
   ],
+  "Security engineer (IDM)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39163253?query=python"
+  ],
   "ML Engineer": [
     [
       null,
@@ -5207,14 +5199,6 @@
     ],
     "https://hh.ru/vacancy/38165007?query=python"
   ],
-  "Web аналитик / Power BI аналитик": [
-    [
-      100000,
-      150000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/36050568?query=python"
-  ],
   "Ведущий системный аналитик/senior system analyst": [
     [
       null,
@@ -5222,6 +5206,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39674940?query=python"
+  ],
+  "Web аналитик / Power BI аналитик": [
+    [
+      100000,
+      150000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/36050568?query=python"
   ],
   "Junior ETL-разработчик": [
     [
@@ -5335,14 +5327,6 @@
     ],
     "https://hh.ru/vacancy/39070725?query=python"
   ],
-  "Ведущий разработчик Fullstack (удаленно)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39665724?query=python"
-  ],
   "Middle+/Senior PHP Backend Developer": [
     [
       100000,
@@ -5351,13 +5335,13 @@
     ],
     "https://hh.ru/vacancy/39461953?query=python"
   ],
-  "PS Engineer (junior Python) | remote": [
+  "Ведущий разработчик Fullstack (удаленно)": [
     [
-      1000,
       null,
-      "usd"
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39852474?query=python"
+    "https://hh.ru/vacancy/39665724?query=python"
   ],
   "Oracle Developer - RiskEngine": [
     [
@@ -5366,6 +5350,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39840469?query=python"
+  ],
+  "PS Engineer (junior Python) | remote": [
+    [
+      1000,
+      null,
+      "usd"
+    ],
+    "https://hh.ru/vacancy/39852474?query=python"
   ],
   "Site Reliability Engineer (SRE) / Software Engineer": [
     [
@@ -5391,22 +5383,6 @@
     ],
     "https://hh.ru/vacancy/39485137?query=python"
   ],
-  "Performance Lead (Руководитель группы нагрузочного тестирования)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39873235?query=python"
-  ],
-  "Data Engineer (Hadoop)": [
-    [
-      160000,
-      null,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39848058?query=python"
-  ],
   "Администратор Qlik Sense": [
     [
       null,
@@ -5423,13 +5399,21 @@
     ],
     "https://hh.ru/vacancy/39475463?query=python"
   ],
-  "Разработчик биллинга (Middle, Зеленоград)": [
+  "Data Engineer (Hadoop)": [
     [
-      120000,
+      160000,
       null,
       "руб"
     ],
-    "https://hh.ru/vacancy/39492973?query=python"
+    "https://hh.ru/vacancy/39848058?query=python"
+  ],
+  "Performance Lead (Руководитель группы нагрузочного тестирования)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39873235?query=python"
   ],
   "APP аналитик": [
     [
@@ -5463,6 +5447,14 @@
     ],
     "https://hh.ru/vacancy/38313034?query=python"
   ],
+  "Разработчик биллинга (Middle, Зеленоград)": [
+    [
+      120000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39492973?query=python"
+  ],
   "Разработчик Senior Java Проект банковской платформы (удаленно на постоянной основе)": [
     [
       null,
@@ -5486,14 +5478,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/37963778?query=python"
-  ],
-  "Ведущий веб-аналитик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39526349?query=python"
   ],
   "Аналитик по созданию математических моделей": [
     [
@@ -5527,6 +5511,14 @@
     ],
     "https://hh.ru/vacancy/26488201?query=python"
   ],
+  "Ведущий веб-аналитик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39526349?query=python"
+  ],
   "Инженер - программист ПЛИС / FPGA Designer": [
     [
       40000,
@@ -5542,14 +5534,6 @@
       null
     ],
     "https://hh.ru/vacancy/38800684?query=python"
-  ],
-  "Java разработчик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37738631?query=python"
   ],
   "Специалист по информационной безопасности (SIEM, IRP, WAF, IDM)": [
     [
@@ -5567,6 +5551,14 @@
     ],
     "https://hh.ru/vacancy/39899643?query=python"
   ],
+  "Java разработчик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37738631?query=python"
+  ],
   "Middle/Senior PHP Developer (B2C)": [
     [
       null,
@@ -5582,14 +5574,6 @@
       null
     ],
     "https://hh.ru/vacancy/39628753?query=python"
-  ],
-  "Senior iOS Developer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39870821?query=python"
   ],
   "Специалист по маркетинговым исследованиям (количественные исследования)": [
     [
@@ -5623,6 +5607,14 @@
     ],
     "https://hh.ru/vacancy/39364658?query=python"
   ],
+  "Senior iOS Developer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39870821?query=python"
+  ],
   "Senior Data Scientist (Блок риски, Центр моделирования малого и микро бизнеса)": [
     [
       null,
@@ -5638,14 +5630,6 @@
       null
     ],
     "https://hh.ru/vacancy/39891639?query=python"
-  ],
-  "Менеджер по управлению данными Центр технологий, моделирования и управления данными": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39440359?query=python"
   ],
   "Программист 1С удаленный": [
     [
@@ -5671,6 +5655,14 @@
     ],
     "https://hh.ru/vacancy/36870157?query=python"
   ],
+  "Менеджер по управлению данными Центр технологий, моделирования и управления данными": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39440359?query=python"
+  ],
   "Аналитик Оптимизационных Систем": [
     [
       null,
@@ -5687,14 +5679,6 @@
     ],
     "https://hh.ru/vacancy/39863660?query=python"
   ],
-  "Системный Инженер (Linux)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/36535379?query=python"
-  ],
   "Разработчик Process Mining": [
     [
       null,
@@ -5710,6 +5694,14 @@
       null
     ],
     "https://hh.ru/vacancy/39495505?query=python"
+  ],
+  "Системный Инженер (Linux)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/36535379?query=python"
   ],
   "Тест - менеджер": [
     [
@@ -5743,22 +5735,6 @@
     ],
     "https://hh.ru/vacancy/39409700?query=python"
   ],
-  "Математик-программист / Разработчик (Python)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39623669?query=python"
-  ],
-  "Аналитик по качеству данных": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39869759?query=python"
-  ],
   "Инженер-оптик": [
     [
       65000,
@@ -5774,6 +5750,14 @@
       null
     ],
     "https://hh.ru/vacancy/39736066?query=python"
+  ],
+  "Математик-программист / Разработчик (Python)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39623669?query=python"
   ],
   "Ведущий системный администратор Zabbix": [
     [
@@ -5799,6 +5783,14 @@
     ],
     "https://hh.ru/vacancy/39364025?query=python"
   ],
+  "Аналитик по качеству данных": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39869759?query=python"
+  ],
   "Руководитель отдела разработки ПО": [
     [
       null,
@@ -5807,14 +5799,6 @@
     ],
     "https://hh.ru/vacancy/37219570?query=python"
   ],
-  "PHP-разработчик в myTracker": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37752897?query=python"
-  ],
   "Руководитель SEO-отдела / Head of SEO": [
     [
       null,
@@ -5822,14 +5806,6 @@
       null
     ],
     "https://hh.ru/vacancy/39544955?query=python"
-  ],
-  "Mobile аналитик": [
-    [
-      null,
-      250000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39872730?query=python"
   ],
   "Аналитик в Страхование": [
     [
@@ -5846,6 +5822,22 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39521643?query=python"
+  ],
+  "PHP-разработчик в myTracker": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37752897?query=python"
+  ],
+  "Mobile аналитик": [
+    [
+      null,
+      250000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39872730?query=python"
   ],
   "Аналитик в разработку отчетности": [
     [
@@ -5871,22 +5863,6 @@
     ],
     "https://hh.ru/vacancy/39608617?query=python"
   ],
-  "Младший аналитик данных": [
-    [
-      null,
-      40000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39855846?query=python"
-  ],
-  "DevOps специалист": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/32769902?query=python"
-  ],
   "Инженер службы внедрения": [
     [
       null,
@@ -5903,13 +5879,13 @@
     ],
     "https://hh.ru/vacancy/38479298?query=python"
   ],
-  "ML инженер (Senior ML engineer)": [
+  "Младший аналитик данных": [
     [
       null,
-      null,
-      null
+      40000,
+      "руб"
     ],
-    "https://hh.ru/vacancy/39850601?query=python"
+    "https://hh.ru/vacancy/39855846?query=python"
   ],
   "Аналитик данных (источники трафика)": [
     [
@@ -5919,6 +5895,14 @@
     ],
     "https://hh.ru/vacancy/39703568?query=python"
   ],
+  "DevOps специалист": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/32769902?query=python"
+  ],
   "SRE/Site Reliability Engineer": [
     [
       2000,
@@ -5926,6 +5910,14 @@
       "usd"
     ],
     "https://hh.ru/vacancy/39904794?query=python"
+  ],
+  "ML инженер (Senior ML engineer)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39850601?query=python"
   ],
   "Системный администратор Windows/ систем хранения данных": [
     [
@@ -5967,6 +5959,14 @@
     ],
     "https://hh.ru/vacancy/39277312?query=python"
   ],
+  "Senior Developer DWH (MS SQL)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38802856?query=python"
+  ],
   "Разработчик ETL": [
     [
       null,
@@ -5991,13 +5991,13 @@
     ],
     "https://hh.ru/vacancy/38487660?query=python"
   ],
-  "Senior Developer DWH (MS SQL)": [
+  "Системный аналитик / System analyst": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38802856?query=python"
+    "https://hh.ru/vacancy/38871307?query=python"
   ],
   "Младший дата-инженер (IT)": [
     [
@@ -6014,14 +6014,6 @@
       null
     ],
     "https://hh.ru/vacancy/39833299?query=python"
-  ],
-  "Системный аналитик / System analyst": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38871307?query=python"
   ],
   "Инженер доступности сервисов в Я.Поиск": [
     [
@@ -6079,14 +6071,6 @@
     ],
     "https://hh.ru/vacancy/39506607?query=python"
   ],
-  "Разработчик frontend (Django/React)": [
-    [
-      150000,
-      null,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39837199?query=python"
-  ],
   "Business analyst": [
     [
       null,
@@ -6095,13 +6079,13 @@
     ],
     "https://hh.ru/vacancy/39814944?query=python"
   ],
-  "Портфельный аналитик МТС ФинТех": [
+  "Разработчик frontend (Django/React)": [
     [
+      150000,
       null,
-      null,
-      null
+      "руб"
     ],
-    "https://hh.ru/vacancy/39872269?query=python"
+    "https://hh.ru/vacancy/39837199?query=python"
   ],
   "Инженер по информационной безопасности (Android приложения)": [
     [
@@ -6143,6 +6127,14 @@
     ],
     "https://hh.ru/vacancy/39876908?query=python"
   ],
+  "Портфельный аналитик МТС ФинТех": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39872269?query=python"
+  ],
   "Ведущий сетевой инженер/инженер передачи данных": [
     [
       100000,
@@ -6150,22 +6142,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39779172?query=python"
-  ],
-  "Senior Java developer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/35996510?query=python"
-  ],
-  "Ведущий системный администратор": [
-    [
-      100000,
-      null,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39201862?query=python"
   ],
   "Риск-менеджер": [
     [
@@ -6191,6 +6167,22 @@
     ],
     "https://hh.ru/vacancy/39477564?query=python"
   ],
+  "Senior Java developer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/35996510?query=python"
+  ],
+  "Ведущий системный администратор": [
+    [
+      100000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39201862?query=python"
+  ],
   "Business Analyst/Бизнес аналитик": [
     [
       null,
@@ -6207,14 +6199,6 @@
     ],
     "https://hh.ru/vacancy/39703674?query=python"
   ],
-  "Аналитик (Телеком)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39865168?query=python"
-  ],
   "UNIX-инженер": [
     [
       null,
@@ -6230,6 +6214,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/38407325?query=python"
+  ],
+  "Аналитик (Телеком)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39865168?query=python"
   ],
   "Директор IT, CIO": [
     [
@@ -6287,14 +6279,6 @@
     ],
     "https://hh.ru/vacancy/39892367?query=python"
   ],
-  "Python QA automation senior specialist": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39715839?query=python"
-  ],
   "Главный специалист в Группу по предпечатной подготовке (Perl)": [
     [
       null,
@@ -6327,6 +6311,14 @@
     ],
     "https://hh.ru/vacancy/39550919?query=python"
   ],
+  "Python QA automation senior specialist": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39715839?query=python"
+  ],
   "Инженер-конструктор": [
     [
       40000,
@@ -6351,14 +6343,6 @@
     ],
     "https://hh.ru/vacancy/38023678?query=python"
   ],
-  "Product Analyst / Data Analyst (Автобусы)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39726209?query=python"
-  ],
   "Ведущий специалист технической поддержки": [
     [
       null,
@@ -6366,6 +6350,14 @@
       null
     ],
     "https://hh.ru/vacancy/39435109?query=python"
+  ],
+  "Product Analyst / Data Analyst (Автобусы)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39726209?query=python"
   ],
   "Backend Senior Python Developer": [
     [
@@ -6399,14 +6391,6 @@
     ],
     "https://hh.ru/vacancy/39897217?query=python"
   ],
-  "Backend/Fullstack developer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39527025?query=python"
-  ],
   "Linux инженер в команду инфраструктурных продуктов": [
     [
       null,
@@ -6414,14 +6398,6 @@
       null
     ],
     "https://hh.ru/vacancy/39574916?query=python"
-  ],
-  "Ведущий специалист отдела сопровождения бизнес-приложений (веб-сайт)": [
-    [
-      null,
-      100000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/38824903?query=python"
   ],
   "Разработчик С++ (команда беспилотника)": [
     [
@@ -6438,6 +6414,22 @@
       null
     ],
     "https://hh.ru/vacancy/38164970?query=python"
+  ],
+  "Backend/Fullstack developer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39527025?query=python"
+  ],
+  "Ведущий специалист отдела сопровождения бизнес-приложений (веб-сайт)": [
+    [
+      null,
+      100000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/38824903?query=python"
   ],
   "Back-end Разработчик": [
     [
@@ -6463,14 +6455,6 @@
     ],
     "https://hh.ru/vacancy/39590597?query=python"
   ],
-  "Аналитик регионального управления": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39864627?query=python"
-  ],
   "DevOps инженер Middle": [
     [
       null,
@@ -6479,13 +6463,13 @@
     ],
     "https://hh.ru/vacancy/37343783?query=python"
   ],
-  "Аналитик Elma": [
+  "Аналитик регионального управления": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38849333?query=python"
+    "https://hh.ru/vacancy/39864627?query=python"
   ],
   "Главный инженер по разработке": [
     [
@@ -6511,13 +6495,13 @@
     ],
     "https://hh.ru/vacancy/38476320?query=python"
   ],
-  "Разработчик BackEnd Python": [
+  "Аналитик Elma": [
     [
-      150000,
-      180000,
-      "руб"
+      null,
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39832755?query=python"
+    "https://hh.ru/vacancy/38849333?query=python"
   ],
   "Системный архитектор / Системный аналитик": [
     [
@@ -6535,13 +6519,13 @@
     ],
     "https://hh.ru/vacancy/38900434?query=python"
   ],
-  "Инженер по тестированию backend (remote)": [
+  "Разработчик BackEnd Python": [
     [
-      100000,
-      null,
+      150000,
+      180000,
       "руб"
     ],
-    "https://hh.ru/vacancy/39373413?query=python"
+    "https://hh.ru/vacancy/39832755?query=python"
   ],
   "Head of DevOps/ Team Lead (возможна удаленная работа)": [
     [
@@ -6550,6 +6534,14 @@
       null
     ],
     "https://hh.ru/vacancy/39887415?query=python"
+  ],
+  "Инженер по тестированию backend (remote)": [
+    [
+      100000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39373413?query=python"
   ],
   "Gamedev Producer / Product Owner": [
     [
@@ -6583,14 +6575,6 @@
     ],
     "https://hh.ru/vacancy/39209262?query=python"
   ],
-  "С++ разработчик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39872303?query=python"
-  ],
   "Ведущий продуктовый аналитик": [
     [
       null,
@@ -6615,21 +6599,13 @@
     ],
     "https://hh.ru/vacancy/39651836?query=python"
   ],
-  "Fullstack-разработчик": [
+  "С++ разработчик": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39859050?query=python"
-  ],
-  "Cloud DevOps Engineer (SRE)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37073467?query=python"
+    "https://hh.ru/vacancy/39872303?query=python"
   ],
   "Ведущий системный администратор прикладного ПО": [
     [
@@ -6638,6 +6614,14 @@
       null
     ],
     "https://hh.ru/vacancy/37588013?query=python"
+  ],
+  "Fullstack-разработчик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39859050?query=python"
   ],
   "Системный администратор/HelpDesk": [
     [
@@ -6679,6 +6663,14 @@
     ],
     "https://hh.ru/vacancy/39862421?query=python"
   ],
+  "Cloud DevOps Engineer (SRE)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37073467?query=python"
+  ],
   "Риск-аналитик": [
     [
       null,
@@ -6686,22 +6678,6 @@
       null
     ],
     "https://hh.ru/vacancy/38601199?query=python"
-  ],
-  "Продуктовый аналитик / Игровой аналитик / Product Analyst / Game Analyst (Junior)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37789593?query=python"
-  ],
-  "Разработчик full-stack Python, Flask, PostgreSQL JS, Vue, Vuex": [
-    [
-      150000,
-      180000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39832942?query=python"
   ],
   "Ведущий Бизнес-аналитик": [
     [
@@ -6711,13 +6687,21 @@
     ],
     "https://hh.ru/vacancy/39751678?query=python"
   ],
-  "Data scientist": [
+  "Разработчик full-stack Python, Flask, PostgreSQL JS, Vue, Vuex": [
+    [
+      150000,
+      180000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39832942?query=python"
+  ],
+  "Продуктовый аналитик / Игровой аналитик / Product Analyst / Game Analyst (Junior)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39785031?query=python"
+    "https://hh.ru/vacancy/37789593?query=python"
   ],
   "Финансовый аналитик отдела автоматизации и повышения эффективности": [
     [
@@ -6726,6 +6710,14 @@
       null
     ],
     "https://hh.ru/vacancy/39891617?query=python"
+  ],
+  "Data scientist": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39785031?query=python"
   ],
   "Technical Project Manager/ Scrum Master (remote, full-time)": [
     [
@@ -6743,14 +6735,6 @@
     ],
     "https://hh.ru/vacancy/39877689?query=python"
   ],
-  "Аналитик отдела разработки показателей оценки деятельности медицинских организаций": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37991197?query=python"
-  ],
   "IT бизнес-партнер": [
     [
       null,
@@ -6766,6 +6750,14 @@
       null
     ],
     "https://hh.ru/vacancy/39162537?query=python"
+  ],
+  "Аналитик отдела разработки показателей оценки деятельности медицинских организаций": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37991197?query=python"
   ],
   "Администратор TOMCAT": [
     [
@@ -6791,14 +6783,6 @@
     ],
     "https://hh.ru/vacancy/39713154?query=python"
   ],
-  "Главный Системный Архитектор": [
-    [
-      150000,
-      250000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39689505?query=python"
-  ],
   "Инженер эксплуатации (Production engineer)": [
     [
       null,
@@ -6823,6 +6807,14 @@
     ],
     "https://hh.ru/vacancy/39845820?query=python"
   ],
+  "Главный Системный Архитектор": [
+    [
+      150000,
+      250000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39689505?query=python"
+  ],
   "Старший инспектор": [
     [
       null,
@@ -6838,14 +6830,6 @@
       null
     ],
     "https://hh.ru/vacancy/39122193?query=python"
-  ],
-  "Senior DWH Developer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37279653?query=python"
   ],
   "Риск аналитик (финансовые риски)": [
     [
@@ -6863,13 +6847,13 @@
     ],
     "https://hh.ru/vacancy/36179352?query=python"
   ],
-  "Senior Machine Learning Developer": [
+  "Senior DWH Developer": [
     [
-      270000,
       null,
-      "руб"
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/38714516?query=python"
+    "https://hh.ru/vacancy/37279653?query=python"
   ],
   "Технический эксперт Управления средств защиты ИТ инфраструктуры": [
     [
@@ -6902,6 +6886,14 @@
       null
     ],
     "https://hh.ru/vacancy/39382624?query=python"
+  ],
+  "Senior Machine Learning Developer": [
+    [
+      270000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/38714516?query=python"
   ],
   "Ведущий эксперт (инфраструктурная безопасность)": [
     [
@@ -6967,6 +6959,14 @@
     ],
     "https://hh.ru/vacancy/38349576?query=python"
   ],
+  "Старший эксперт": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39471194?query=python"
+  ],
   "Ведущий инженер СХД/SAN": [
     [
       null,
@@ -6975,13 +6975,13 @@
     ],
     "https://hh.ru/vacancy/35624083?query=python"
   ],
-  "Старший эксперт": [
+  "Product Manager": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39471194?query=python"
+    "https://hh.ru/vacancy/39378788?query=python"
   ],
   "Senior Python developer в музыкальный стриминговый сервис СберЗвук": [
     [
@@ -6998,14 +6998,6 @@
       null
     ],
     "https://hh.ru/vacancy/39860036?query=python"
-  ],
-  "Product Manager": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39378788?query=python"
   ],
   "Senior product analyst": [
     [
@@ -7047,13 +7039,13 @@
     ],
     "https://hh.ru/vacancy/38721544?query=python"
   ],
-  "Начальник отдела автоматизации аналитических систем Аналитического управления": [
+  "Преподаватель авторских IT-семинаров/курсов": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39860085?query=python"
+    "https://hh.ru/vacancy/37853467?query=python"
   ],
   "Data Analyst (Tech Platform)": [
     [
@@ -7063,21 +7055,13 @@
     ],
     "https://hh.ru/vacancy/37125452?query=python"
   ],
-  "Преподаватель авторских IT-семинаров/курсов": [
+  "Начальник отдела автоматизации аналитических систем Аналитического управления": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/37853467?query=python"
-  ],
-  "SQL Аналитик (контактного центра/робот-оператор)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39868071?query=python"
+    "https://hh.ru/vacancy/39860085?query=python"
   ],
   "Исполнительный директор по исследованию данных (Блок риски, Центр моделирования ММБ)": [
     [
@@ -7086,6 +7070,14 @@
       null
     ],
     "https://hh.ru/vacancy/39545752?query=python"
+  ],
+  "SQL Аналитик (контактного центра/робот-оператор)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39868071?query=python"
   ],
   "Инженер по тестированию (QA)": [
     [
@@ -7111,13 +7103,13 @@
     ],
     "https://hh.ru/vacancy/39878689?query=python"
   ],
-  "Заместитель начальника отдела автоматизации аналитических систем Аналитического управления": [
+  "Архитектор высоконагруженных проектов": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39860161?query=python"
+    "https://hh.ru/vacancy/39061404?query=python"
   ],
   "Разработчик Erlang": [
     [
@@ -7127,21 +7119,13 @@
     ],
     "https://hh.ru/vacancy/39846764?query=python"
   ],
-  "Архитектор высоконагруженных проектов": [
+  "Заместитель начальника отдела автоматизации аналитических систем Аналитического управления": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39061404?query=python"
-  ],
-  "Ansible Developer for Integration Platform Administration": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39865040?query=python"
+    "https://hh.ru/vacancy/39860161?query=python"
   ],
   "Senior Marketing Analyst (Business)": [
     [
@@ -7150,6 +7134,22 @@
       null
     ],
     "https://hh.ru/vacancy/39220194?query=python"
+  ],
+  "Системный Архитектор": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/36854096?query=python"
+  ],
+  "Ansible Developer for Integration Platform Administration": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39865040?query=python"
   ],
   "Начальник отдела анализа данных Аналитического управления": [
     [
@@ -7167,13 +7167,21 @@
     ],
     "https://hh.ru/vacancy/37738615?query=python"
   ],
-  "Системный Архитектор": [
+  "Ведущий специалист (Группа сопровождения \"Криптоядро\")": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/36854096?query=python"
+    "https://hh.ru/vacancy/39260559?query=python"
+  ],
+  "Аналитик клиентского сервиса": [
+    [
+      70000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39151214?query=python"
   ],
   "Senior Systems Analyst": [
     [
@@ -7183,22 +7191,6 @@
     ],
     "https://hh.ru/vacancy/39864131?query=python"
   ],
-  "Ведущий специалист (Группа сопровождения \"Криптоядро\")": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39260559?query=python"
-  ],
-  "DevOps Manager": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38715306?query=python"
-  ],
   "Senior/Middle Backend developer (C++/Python)": [
     [
       null,
@@ -7207,13 +7199,13 @@
     ],
     "https://hh.ru/vacancy/39845280?query=python"
   ],
-  "Аналитик клиентского сервиса": [
+  "DevOps Manager": [
     [
-      70000,
       null,
-      "руб"
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39151214?query=python"
+    "https://hh.ru/vacancy/38715306?query=python"
   ],
   "Руководитель Digital агентства / CMO": [
     [
@@ -7255,14 +7247,6 @@
     ],
     "https://hh.ru/vacancy/39723498?query=python"
   ],
-  "Сетевой инженер": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38158203?query=python"
-  ],
   "Product owner": [
     [
       null,
@@ -7295,13 +7279,13 @@
     ],
     "https://hh.ru/vacancy/39833934?query=python"
   ],
-  "Системный администратор Linux (Виртуализация и СХД)": [
+  "Сетевой инженер": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38768229?query=python"
+    "https://hh.ru/vacancy/38158203?query=python"
   ],
   "Менеджер веб-проектов": [
     [
@@ -7319,13 +7303,13 @@
     ],
     "https://hh.ru/vacancy/38233888?query=python"
   ],
-  "Руководитель отдела разработки": [
+  "Системный администратор Linux (Виртуализация и СХД)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38875036?query=python"
+    "https://hh.ru/vacancy/38768229?query=python"
   ],
   "Эксперт по техническому развитию сервисов": [
     [
@@ -7343,14 +7327,6 @@
     ],
     "https://hh.ru/vacancy/39790629?query=python"
   ],
-  "Менеджер по информационной безопасности": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39869073?query=python"
-  ],
   "IT Recruiter": [
     [
       null,
@@ -7359,13 +7335,21 @@
     ],
     "https://hh.ru/vacancy/39874473?query=python"
   ],
-  "Программист С++(удаленно)": [
+  "Руководитель отдела разработки": [
     [
-      100000,
-      120000,
-      "руб"
+      null,
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39839572?query=python"
+    "https://hh.ru/vacancy/38875036?query=python"
+  ],
+  "Менеджер по информационной безопасности": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39869073?query=python"
   ],
   "Pre-sale архитектор в IOT": [
     [
@@ -7375,29 +7359,13 @@
     ],
     "https://hh.ru/vacancy/39674313?query=python"
   ],
-  "Senior Data analyst (блок УБ, команда инвестиционных продуктов)": [
+  "Программист С++(удаленно)": [
     [
-      null,
-      null,
-      null
+      100000,
+      120000,
+      "руб"
     ],
-    "https://hh.ru/vacancy/39857792?query=python"
-  ],
-  "Ведущий разработчик Python": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39521019?query=python"
-  ],
-  "Серверный разработчик / Backend Developer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/26831739?query=python"
+    "https://hh.ru/vacancy/39839572?query=python"
   ],
   "DevSecOps инженер (направление Application Security)": [
     [
@@ -7407,6 +7375,30 @@
     ],
     "https://hh.ru/vacancy/37608278?query=python"
   ],
+  "Ведущий разработчик Python": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39521019?query=python"
+  ],
+  "Senior Data analyst (блок УБ, команда инвестиционных продуктов)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39857792?query=python"
+  ],
+  "Серверный разработчик / Backend Developer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/26831739?query=python"
+  ],
   "Database Application Administrator (Инженер эксплуатации/L2 Support Engineer)": [
     [
       null,
@@ -7415,14 +7407,6 @@
     ],
     "https://hh.ru/vacancy/39866388?query=python"
   ],
-  "Full-Stack Developer": [
-    [
-      120000,
-      200000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39845845?query=python"
-  ],
   "Менеджер проекта": [
     [
       80000,
@@ -7430,6 +7414,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39429962?query=python"
+  ],
+  "Full-Stack Developer": [
+    [
+      120000,
+      200000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39845845?query=python"
   ],
   "Системный администратор (стажер)": [
     [
@@ -7455,6 +7447,14 @@
     ],
     "https://hh.ru/vacancy/38308518?query=python"
   ],
+  "Администратор 1С": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39908631?query=python"
+  ],
   "Senior Fullstack Developer (Python, remote)": [
     [
       4000,
@@ -7470,14 +7470,6 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39625261?query=python"
-  ],
-  "Администратор 1С": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39908631?query=python"
   ],
   "Аналитик Дирекции оценки и методологии рисков": [
     [
@@ -7511,13 +7503,13 @@
     ],
     "https://hh.ru/vacancy/39861770?query=python"
   ],
-  "Заместитель начальника отдела анализа данных Аналитического управления": [
+  "Аналитик по клиентскому опыту": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39860092?query=python"
+    "https://hh.ru/vacancy/37897654?query=python"
   ],
   "Менеджер по исследованию покупательского поведения": [
     [
@@ -7526,22 +7518,6 @@
       null
     ],
     "https://hh.ru/vacancy/39689737?query=python"
-  ],
-  "Embedded Software Engineer": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39840925?query=python"
-  ],
-  "Аналитик по клиентскому опыту": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37897654?query=python"
   ],
   "Дежурный инженер": [
     [
@@ -7559,21 +7535,21 @@
     ],
     "https://hh.ru/vacancy/39460794?query=python"
   ],
-  "Product Owner": [
+  "Заместитель начальника отдела анализа данных Аналитического управления": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39453861?query=python"
+    "https://hh.ru/vacancy/39860092?query=python"
   ],
-  "Главный аналитик (риски)": [
+  "Embedded Software Engineer": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39862136?query=python"
+    "https://hh.ru/vacancy/39840925?query=python"
   ],
   "Аналитик на направление целевого маркетинга": [
     [
@@ -7599,6 +7575,22 @@
     ],
     "https://hh.ru/vacancy/39888796?query=python"
   ],
+  "Product Owner": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39453861?query=python"
+  ],
+  "Главный аналитик (риски)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39862136?query=python"
+  ],
   "PreSale-менеджер/инженер": [
     [
       null,
@@ -7615,14 +7607,6 @@
     ],
     "https://hh.ru/vacancy/39677050?query=python"
   ],
-  "Старший системный аналитик": [
-    [
-      85000,
-      null,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39262184?query=python"
-  ],
   "Старший специалист в Отдел отчетности и портфельного анализа РМ": [
     [
       null,
@@ -7630,6 +7614,14 @@
       null
     ],
     "https://hh.ru/vacancy/39376092?query=python"
+  ],
+  "Старший системный аналитик": [
+    [
+      85000,
+      null,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39262184?query=python"
   ],
   "Senior/Lead Python Developer": [
     [
@@ -7663,14 +7655,6 @@
     ],
     "https://hh.ru/vacancy/36865267?query=python"
   ],
-  "Программист BackEnd (Python)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39013712?query=python"
-  ],
   "Консультант по чат-ботам": [
     [
       null,
@@ -7679,13 +7663,13 @@
     ],
     "https://hh.ru/vacancy/39572640?query=python"
   ],
-  "Senior/Team lead Fullstack-разработчик": [
+  "Программист BackEnd (Python)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39858880?query=python"
+    "https://hh.ru/vacancy/39013712?query=python"
   ],
   "Analyst / Associate в Change подразделении Департамента Инвестиционной деятельности": [
     [
@@ -7695,13 +7679,13 @@
     ],
     "https://hh.ru/vacancy/39891183?query=python"
   ],
-  "IT System Administrator": [
+  "Senior/Team lead Fullstack-разработчик": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39860037?query=python"
+    "https://hh.ru/vacancy/39858880?query=python"
   ],
   "Руководитель направления технической поддержки программа Базис 2+ЛТП": [
     [
@@ -7711,14 +7695,6 @@
     ],
     "https://hh.ru/vacancy/39875325?query=python"
   ],
-  "Senior QA specialist": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39240563?query=python"
-  ],
   "Product Owner / Менеджер продукта": [
     [
       80000,
@@ -7727,13 +7703,21 @@
     ],
     "https://hh.ru/vacancy/39457366?query=python"
   ],
-  "Стажер/Консультант в группу Анализа Данных (Data Assurance&Analytics)": [
+  "IT System Administrator": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39575523?query=python"
+    "https://hh.ru/vacancy/39860037?query=python"
+  ],
+  "Senior QA specialist": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39240563?query=python"
   ],
   "Архитектор решений / Solution Architect в В2В": [
     [
@@ -7751,13 +7735,13 @@
     ],
     "https://hh.ru/vacancy/39884509?query=python"
   ],
-  "Search Engineer": [
+  "Стажер/Консультант в группу Анализа Данных (Data Assurance&Analytics)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/38364405?query=python"
+    "https://hh.ru/vacancy/39575523?query=python"
   ],
   "Руководитель продуктовой аналитики голосового ассистента Олега (AI/ML)": [
     [
@@ -7766,6 +7750,14 @@
       null
     ],
     "https://hh.ru/vacancy/37371587?query=python"
+  ],
+  "Search Engineer": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38364405?query=python"
   ],
   "Старший консультант SAP BW/BO": [
     [
@@ -7815,14 +7807,6 @@
     ],
     "https://hh.ru/vacancy/39745406?query=python"
   ],
-  "Backend-разработчик (DDoS Protection)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38629970?query=python"
-  ],
   "Портфельный риск-менеджер/Отдел методологии рисков лизинговых процессов/": [
     [
       null,
@@ -7839,13 +7823,13 @@
     ],
     "https://hh.ru/vacancy/37968653?query=python"
   ],
-  "Аналитик коммерческих сервисов": [
+  "Backend-разработчик (DDoS Protection)": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39870227?query=python"
+    "https://hh.ru/vacancy/38629970?query=python"
   ],
   "Ведущий аудитор": [
     [
@@ -7854,6 +7838,14 @@
       null
     ],
     "https://hh.ru/vacancy/39907843?query=python"
+  ],
+  "Аналитик коммерческих сервисов": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39870227?query=python"
   ],
   "Маркетинговый аналитик": [
     [
@@ -7887,14 +7879,6 @@
     ],
     "https://hh.ru/vacancy/39815858?query=python"
   ],
-  "Web-разработчик (Full stack developer)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39848778?query=python"
-  ],
   "Ведущий специалист (Группа эксплуатации вычислительной инфраструктуры)": [
     [
       null,
@@ -7902,6 +7886,14 @@
       null
     ],
     "https://hh.ru/vacancy/39386801?query=python"
+  ],
+  "Web-разработчик (Full stack developer)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39848778?query=python"
   ],
   "Ведущий сетевой инженер / Эксперт": [
     [
@@ -7926,14 +7918,6 @@
       null
     ],
     "https://hh.ru/vacancy/37585041?query=python"
-  ],
-  "Senior Data Scientist (Surge Pricing)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/35409042?query=python"
   ],
   "Продуктовый аналитик (Команда цифровых продуктов и сервисов)": [
     [
@@ -7999,14 +7983,6 @@
     ],
     "https://hh.ru/vacancy/39843626?query=python"
   ],
-  "Business Analyst OZON Marketplace": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39398297?query=python"
-  ],
   "Маркетолог-аналитик": [
     [
       null,
@@ -8015,13 +7991,13 @@
     ],
     "https://hh.ru/vacancy/39230936?query=python"
   ],
-  "Руководитель направления прогнозирования резервов и развития риск-аналитики": [
+  "Business Analyst OZON Marketplace": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39401419?query=python"
+    "https://hh.ru/vacancy/39398297?query=python"
   ],
   "Java-разработчик (система кредитных рисков)": [
     [
@@ -8031,21 +8007,13 @@
     ],
     "https://hh.ru/vacancy/39268592?query=python"
   ],
-  "DevOps engineer на проект Digital Credit": [
+  "Руководитель направления прогнозирования резервов и развития риск-аналитики": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39628627?query=python"
-  ],
-  "Linux инженер (SberDevices)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39452620?query=python"
+    "https://hh.ru/vacancy/39401419?query=python"
   ],
   "Руководитель группы (Эксплуатация вычислительного комплекса)": [
     [
@@ -8063,6 +8031,22 @@
     ],
     "https://hh.ru/vacancy/39424728?query=python"
   ],
+  "DevOps engineer на проект Digital Credit": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39628627?query=python"
+  ],
+  "Linux инженер (SberDevices)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39452620?query=python"
+  ],
   "Ведущий системный администратор (Linux)": [
     [
       130000,
@@ -8079,14 +8063,6 @@
     ],
     "https://hh.ru/vacancy/39279381?query=python"
   ],
-  "Senior Engineer, Coded Modulation": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39841723?query=python"
-  ],
   "Руководитель отдела локализации продукта": [
     [
       50000,
@@ -8094,6 +8070,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39408222?query=python"
+  ],
+  "Senior Engineer, Coded Modulation": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39841723?query=python"
   ],
   "NLP разработчик, MTS AI": [
     [
@@ -8143,6 +8127,14 @@
     ],
     "https://hh.ru/vacancy/39193734?query=python"
   ],
+  "Specialist of the Independent Price Verification department": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39873518?query=python"
+  ],
   "Главный эксперт по обработке сведений": [
     [
       null,
@@ -8158,14 +8150,6 @@
       null
     ],
     "https://hh.ru/vacancy/38932280?query=python"
-  ],
-  "Specialist of the Independent Price Verification department": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39873518?query=python"
   ],
   "Risk analyst (дистанционно, далее переезд во Вьетнам)": [
     [
@@ -8191,14 +8175,6 @@
     ],
     "https://hh.ru/vacancy/39865831?query=python"
   ],
-  "DWH developer (удаленно)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39622461?query=python"
-  ],
   "Архитектор ODS": [
     [
       null,
@@ -8206,6 +8182,14 @@
       null
     ],
     "https://hh.ru/vacancy/39898097?query=python"
+  ],
+  "DWH developer (удаленно)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39622461?query=python"
   ],
   "Главный специалист по анализу больших массивов данных/Аналитик/Data scientist": [
     [
@@ -8231,22 +8215,6 @@
     ],
     "https://hh.ru/vacancy/36999804?query=python"
   ],
-  "Разработчик frontend JS, Vue, Vuex, SPA": [
-    [
-      150000,
-      180000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39832513?query=python"
-  ],
-  "Стажер Sberseasons Нагрузочное тестирование": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39828369?query=python"
-  ],
   "Руководитель проекта (retail collection)": [
     [
       null,
@@ -8263,13 +8231,21 @@
     ],
     "https://hh.ru/vacancy/39711216?query=python"
   ],
-  "Спам-аналитик": [
+  "Разработчик frontend JS, Vue, Vuex, SPA": [
+    [
+      150000,
+      180000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39832513?query=python"
+  ],
+  "Стажер Sberseasons Нагрузочное тестирование": [
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39840153?query=python"
+    "https://hh.ru/vacancy/39828369?query=python"
   ],
   "Ведущий специалист, Оценка ипотечных активов": [
     [
@@ -8278,6 +8254,14 @@
       null
     ],
     "https://hh.ru/vacancy/39384282?query=python"
+  ],
+  "Спам-аналитик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39840153?query=python"
   ],
   "Эконометрист / Аналитик": [
     [
@@ -8367,14 +8351,6 @@
     ],
     "https://hh.ru/vacancy/39844557?query=python"
   ],
-  "ETL инженер": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39676205?query=python"
-  ],
   "Ведущий специалист (Группа эксплуатации вычислительного комплекса)": [
     [
       null,
@@ -8382,6 +8358,14 @@
       null
     ],
     "https://hh.ru/vacancy/35949913?query=python"
+  ],
+  "ETL инженер": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39676205?query=python"
   ],
   "Team Lead Data Scientist (Surge Pricing)": [
     [
@@ -8575,14 +8559,6 @@
     ],
     "https://hh.ru/vacancy/39862642?query=python"
   ],
-  "Главный специалист Отдела развития технологий взыскания и отчетности": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39856404?query=python"
-  ],
   "Руководитель разработки Java": [
     [
       null,
@@ -8590,6 +8566,14 @@
       null
     ],
     "https://hh.ru/vacancy/39449830?query=python"
+  ],
+  "Главный специалист Отдела развития технологий взыскания и отчетности": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39856404?query=python"
   ],
   "Главный специалист отдела операций на фондовом рынке": [
     [
@@ -8967,14 +8951,6 @@
     ],
     "https://hh.ru/vacancy/36806796?query=python"
   ],
-  "Администратор инструментов DevOps и тестирования": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/35675647?query=python"
-  ],
   "Аналитик-разработчик (Data Scientist)": [
     [
       null,
@@ -8982,6 +8958,14 @@
       null
     ],
     "https://hh.ru/vacancy/39821221?query=python"
+  ],
+  "Администратор инструментов DevOps и тестирования": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/35675647?query=python"
   ],
   "Разработчик-лингвист, MTS AI": [
     [
@@ -9111,14 +9095,6 @@
     ],
     "https://hh.ru/vacancy/39802992?query=python"
   ],
-  "Junior QA Auto Engineer (ученик)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39390747?query=python"
-  ],
   "Разработчик C# // C# Developer": [
     [
       null,
@@ -9126,6 +9102,14 @@
       null
     ],
     "https://hh.ru/vacancy/39828750?query=python"
+  ],
+  "Junior QA Auto Engineer (ученик)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39390747?query=python"
   ],
   "Аналитик продукта": [
     [
@@ -9207,14 +9191,6 @@
     ],
     "https://hh.ru/vacancy/39728301?query=python"
   ],
-  "Middle Marketing Analyst": [
-    [
-      150000,
-      200000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39841341?query=python"
-  ],
   "Разработчик Инфраструктуры (backend), Ruby on Rails, Python, удаленно": [
     [
       null,
@@ -9222,6 +9198,14 @@
       null
     ],
     "https://hh.ru/vacancy/39385832?query=python"
+  ],
+  "Middle Marketing Analyst": [
+    [
+      150000,
+      200000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39841341?query=python"
   ],
   "Главный инженер по сопровождению": [
     [
@@ -9287,14 +9271,6 @@
     ],
     "https://hh.ru/vacancy/38458859?query=python"
   ],
-  "Технический аналитик / Аналитик BI": [
-    [
-      120000,
-      180000,
-      "руб"
-    ],
-    "https://hh.ru/vacancy/39817162?query=python"
-  ],
   "Code reviewer (react)": [
     [
       null,
@@ -9302,6 +9278,14 @@
       null
     ],
     "https://hh.ru/vacancy/39770444?query=python"
+  ],
+  "Технический аналитик / Аналитик BI": [
+    [
+      120000,
+      180000,
+      "руб"
+    ],
+    "https://hh.ru/vacancy/39817162?query=python"
   ],
   "Системный администратор Linux/ DevOps": [
     [
@@ -9663,14 +9647,6 @@
     ],
     "https://hh.ru/vacancy/39206021?query=python"
   ],
-  "Специалист сопровождения BI": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39528132?query=python"
-  ],
   "Системный аналитик (стажёр)": [
     [
       null,
@@ -9678,6 +9654,14 @@
       null
     ],
     "https://hh.ru/vacancy/39803999?query=python"
+  ],
+  "Специалист сопровождения BI": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39528132?query=python"
   ],
   "Инженер по тестированию умных устройств": [
     [
@@ -9951,6 +9935,14 @@
     ],
     "https://hh.ru/vacancy/39789618?query=python"
   ],
+  "SDET / Test Engineer (KasperskyOS Mobile)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39325292?query=python"
+  ],
   "С++Middle разработчик": [
     [
       null,
@@ -9975,14 +9967,6 @@
     ],
     "https://hh.ru/vacancy/39413240?query=python"
   ],
-  "Руководитель направления по исследованию данных": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39811743?query=python"
-  ],
   "Аналитик SQL": [
     [
       null,
@@ -9990,6 +9974,14 @@
       null
     ],
     "https://hh.ru/vacancy/39303490?query=python"
+  ],
+  "Руководитель направления по исследованию данных": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39811743?query=python"
   ],
   "Бизнес-аналитик / продуктовый аналитик": [
     [
@@ -10023,14 +10015,6 @@
     ],
     "https://hh.ru/vacancy/39813404?query=python"
   ],
-  "Ведущий сетевой инженер": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39818626?query=python"
-  ],
   "Инженер-программист (1320)": [
     [
       null,
@@ -10038,6 +10022,14 @@
       null
     ],
     "https://hh.ru/vacancy/36922065?query=python"
+  ],
+  "Ведущий сетевой инженер": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39818626?query=python"
   ],
   "Инженер по системам ИТ - мониторинга": [
     [
@@ -10095,14 +10087,6 @@
     ],
     "https://hh.ru/vacancy/39814908?query=python"
   ],
-  "Team Lead": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/37585426?query=python"
-  ],
   "DevOps инженер (Kubernetes)": [
     [
       null,
@@ -10110,6 +10094,14 @@
       null
     ],
     "https://hh.ru/vacancy/38936783?query=python"
+  ],
+  "Team Lead": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/37585426?query=python"
   ],
   "Руководитель направления автотестирования (ВЭД)": [
     [
@@ -11127,14 +11119,6 @@
     ],
     "https://hh.ru/vacancy/38108750?query=python"
   ],
-  "Auto QA / Автотестировщик": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/35849671?query=python"
-  ],
   "Разработчик/Middle Full-stack Developer (Flask, Vue.js)": [
     [
       null,
@@ -11142,6 +11126,14 @@
       null
     ],
     "https://hh.ru/vacancy/39756479?query=python"
+  ],
+  "Auto QA / Автотестировщик": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/35849671?query=python"
   ],
   "Senior DevOps Engineer (Remote)": [
     [
@@ -11255,14 +11247,6 @@
     ],
     "https://hh.ru/vacancy/39458427?query=python"
   ],
-  "Data Scientist / Старший специалист по машинному обучению": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39269151?query=python"
-  ],
   "Full-stack developer (React + Django)": [
     [
       150000,
@@ -11270,6 +11254,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/39467379?query=python"
+  ],
+  "Data Scientist / Старший специалист по машинному обучению": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39269151?query=python"
   ],
   "Node.js developer (infrastructure)": [
     [
@@ -12855,14 +12847,6 @@
     ],
     "https://hh.ru/vacancy/39724836?query=python"
   ],
-  "Аналитик данных (школа данных)": [
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39683038?query=python"
-  ],
   "Программист С++/Python (встраиваемые системы)": [
     [
       100000,
@@ -12870,6 +12854,14 @@
       "руб"
     ],
     "https://hh.ru/vacancy/38517047?query=python"
+  ],
+  "Аналитик данных (школа данных)": [
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39683038?query=python"
   ],
   "Инженер HADOOP": [
     [

@@ -27,10 +27,8 @@ def value_delimitter(compensation):
             continue
     return first_val, second_val
 
-
 # https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
 # https://www.superjob.ru/vacancy/search/?keywords=python&geo%5Bt%5D%5B0%5D=4&page=2
-vacancy_pick = input('please, enter vacancy name: ').lower()
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -38,55 +36,62 @@ headers = {
                   'Chrome/86.0.4240.75 Safari/537.36',
 }
 
-params = {
-    'area': '1',
-    'fromSearchLine': 'true',
-    'st': 'searchVacancy',
-    'text': vacancy_pick,
-    'from': 'suggest_post',
-    # 'experience': 'noExperience',
-    'page': 0,
-}
+def hh_parsing():
+    vac_desc_list = {}
+    vacancy_pick = input('please, enter vacancy name: ').lower()
 
-vac_desc_list = {}
+    params_hh = {
+        'area': '1',
+        'fromSearchLine': 'true',
+        'st': 'searchVacancy',
+        'text': vacancy_pick,
+        'from': 'suggest_post',
+        # 'experience': 'noExperience',
+        'page': 0,
+    }
 
-resource = 'https://hh.ru'
-continued_link = '/search/vacancy'
+    resource = 'https://hh.ru'
+    continued_link = '/search/vacancy'
+    while True:
+        response = requests.get(resource + continued_link, params=params_hh, headers=headers)
+        soup = bs(response.text, 'html.parser')
+        data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
+        salary, links, vacancy = [], [], []
+        for val in data_list:
+            links.append(val.find('span').find('a').get('href'))
+            vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
+            compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
+            start, end, unit = None, None, None
+            all_cats = []
+            if compensation:
+                for offered_sum in compensation:
+                    start, end = value_delimitter(offered_sum)
+                    if 'руб' in offered_sum.text.lower():
+                        unit = 'руб'
+                    elif 'usd' in offered_sum.text.lower():
+                        unit = 'usd'
+                    else:
+                        unit = 'eur'
+            all_cats.append(start)
+            all_cats.append(end)
+            all_cats.append(unit)
+            salary.append(all_cats)
+
+        for i in range(len(vacancy)):
+            vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
+        if vac_desc_list:
+            print(vac_desc_list)
+            with open('task03.json', 'w', encoding='utf-8') as f:
+                json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
+        next_page = soup.find('a', {'data-qa': 'pager-next'})
+        if next_page:
+            params['page'] += 1
+        else:
+            break
 
 
-while True:
-    response = requests.get(resource + continued_link, params=params, headers=headers)
-    soup = bs(response.text, 'html.parser')
-    data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
-    salary, links, vacancy = [], [], []
-    for val in data_list:
-        links.append(val.find('span').find('a').get('href'))
-        vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
-        compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
-        start, end, unit = None, None, None
-        all_cats = []
-        if compensation:
-            for offered_sum in compensation:
-                start, end = value_delimitter(offered_sum)
-                if 'руб' in offered_sum.text.lower():
-                    unit = 'руб'
-                elif 'usd' in offered_sum.text.lower():
-                    unit = 'usd'
-                else:
-                    unit = 'eur'
-        all_cats.append(start)
-        all_cats.append(end)
-        all_cats.append(unit)
-        salary.append(all_cats)
+def sj_parsing():
+    pass
 
-    for i in range(len(vacancy)):
-        vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
-    if vac_desc_list:
-        print(vac_desc_list)
-        with open('task03.json', 'w', encoding='utf-8') as f:
-            json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
-    next_page = soup.find('a', {'data-qa': 'pager-next'})
-    if next_page:
-        params['page'] += 1
-    else:
-        break
+if __name__ == '__main__':
+    hh_parsing()

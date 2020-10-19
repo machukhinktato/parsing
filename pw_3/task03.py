@@ -29,7 +29,7 @@ def value_delimitter(compensation):
 
 
 # https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
-
+# https://www.superjob.ru/vacancy/search/?keywords=python&geo%5Bt%5D%5B0%5D=4&page=2
 vacancy_pick = input('please, enter vacancy name: ').lower()
 
 headers = {

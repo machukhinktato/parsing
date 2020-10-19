@@ -104,10 +104,13 @@ def sj_parsing():
     response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
     parsed_html = bs(response.text, 'html.parser')
     data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
-    # pprint(data_list)
-    for i in data_list:
-        pprint(i.find('a').text)
+    vacancies_list, salary_list = [], []
+    for data in data_list:
+        vacancies_list.append(data.find('a').text)
+        salary_list.append(data.find('span', {'class':'_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
+
+    return len(vacancies_list), len(salary_list)
 
 if __name__ == '__main__':
     # hh_parsing()
-    sj_parsing()
+    print(sj_parsing())

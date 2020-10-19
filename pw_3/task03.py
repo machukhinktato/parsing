@@ -50,10 +50,12 @@ params = {
 
 vac_desc_list = {}
 
+resource = 'https://hh.ru'
+continued_link = '/search/vacancy'
+
+
 while True:
-    resource = 'https://hh.ru'
-    req_params = '/search/vacancy'
-    response = requests.get(resource + req_params, params=params, headers=headers)
+    response = requests.get(resource + continued_link, params=params, headers=headers)
     soup = bs(response.text, 'html.parser')
     data_list = soup.findAll('div', {'class': 'vacancy-serp-item__row_header'})
     salary, links, vacancy = [], [], []
@@ -81,7 +83,7 @@ while True:
         vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
     if vac_desc_list:
         print(vac_desc_list)
-        with open('task02.json', 'w', encoding='utf-8') as f:
+        with open('task03.json', 'w', encoding='utf-8') as f:
             json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
     next_page = soup.find('a', {'data-qa': 'pager-next'})
     if next_page:

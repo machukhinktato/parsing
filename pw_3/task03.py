@@ -27,6 +27,7 @@ def value_delimitter(compensation):
             continue
     return first_val, second_val
 
+
 # https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
 # https://www.superjob.ru/vacancy/search/?keywords=python&geo%5Bt%5D%5B0%5D=4&page=2
 
@@ -35,6 +36,7 @@ headers = {
                   'AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/86.0.4240.75 Safari/537.36',
 }
+
 
 def hh_parsing():
     vac_desc_list = {}
@@ -91,7 +93,21 @@ def hh_parsing():
 
 
 def sj_parsing():
-    pass
+    sj_main_link = 'https://www.superjob.ru'
+    sj_search_link = '/vacancy/search/'
+    params = {
+        'keywords': 'python',
+        'geo': 'python',
+        'page': '1',
+    }
+    # while True:
+    response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
+    parsed_html = bs(response.text, 'html.parser')
+    data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
+    # pprint(data_list)
+    for i in data_list:
+        pprint(i.find('a').text)
 
 if __name__ == '__main__':
-    hh_parsing()
+    # hh_parsing()
+    sj_parsing()

@@ -7,6 +7,8 @@ import requests
 import re
 
 
+client = MongoClient('127.0.0.1', 27017)
+
 def int_maker(str_value):
     converter, result = [], []
     for value in str_value:
@@ -90,7 +92,7 @@ def hh_parsing():
         # vac_data.insert_many(vac_desc_list)
 
         if vac_desc_list:
-            print(vac_desc_list)
+            # print(vac_desc_list)
             with open('task03_hh.json', 'w', encoding='utf-8') as f:
                 json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
         next_page = soup.find('a', {'data-qa': 'pager-next'})
@@ -102,6 +104,11 @@ def hh_parsing():
 
 
 def sj_parsing():
+
+
+    db = client['parsed_sj']
+    vacancies = db['vacancies']
+
     sj_main_link = 'https://www.superjob.ru'
     sj_search_link = '/vacancy/search/'
     params = {
@@ -134,46 +141,88 @@ def sj_parsing():
                     continue
 
                 if compensation.find('—') != -1:
-                    start = ''.join([char for char in compensation.split('—')[0] if char.isdigit()])
-                    end = ''.join([char for char in compensation.split('—')[1] if char.isdigit()])
+                    start = int(''.join([char for char in compensation.split('—')[0] if char.isdigit()]))
+                    end = int(''.join([char for char in compensation.split('—')[1] if char.isdigit()]))
                     salary_list.append([start, end, unit])
                 elif compensation.find('от') != -1:
-                    start, end = ''.join([char for char in compensation if char.isdigit()]), None
+                    start, end = int(''.join([char for char in compensation if char.isdigit()])), None
                     salary_list.append([start, end, unit])
                 else:
-                    start, end = None, ''.join([char for char in compensation if char.isdigit()])
+                    start, end = None, int(''.join([char for char in compensation if char.isdigit()]))
                     salary_list.append([start, end, unit])
 
         for i in range(len(vacancies_list)):
             # if vacancies_list[i] in vacancy_description.keys():
             #     vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.hour}'
             vacancy_description.setdefault(i, [vacancies_list[i], salary_list[i], url_list[i]])
-        if vacancy_description:
-            with open('task03_sj.json', 'w', encoding='utf-8') as f:
-                json.dump(vacancy_description, f, indent=2, ensure_ascii=False)
+            # if vacancy_description:
+            #     if 'task03_sj.jsopn':
+            #         with open('task03_sj.json', 'w', encoding='utf-8') as f:
+            #             json.dumps(vacancy_description, f, indent=2, ensure_ascii=False)
+            id = vacancies.count_documents({})
+            # print(url_list[i])
+            # for item in vacancies.find({}):
+            #     print(item)
+            if url_list[i] in vacancies.find({}):
+                continue
+            else:
+                vacancies.insert_one({
+                    '_id': id + 1,
+                    'position': vacancies_list[i],
+                    'from': salary_list[i][0],
+                    'to': salary_list[i][1],
+                    'unit': salary_list[i][2],
+                    'url': url_list[i],
+                })
+                with open('task03_sj.json', 'w', encoding='utf-8') as f:
+                    json.dump([i for i in vacancies.find()], f, indent=2, ensure_ascii=False)
+
         next_page = parsed_html.find('a', {'class': ['icMQ_ _1_Cht _3ze9n f-test-button-dalshe f-test-link-Dalshe']})
         if next_page:
             params['page'] += 1
         else:
-            return vacancy_description
+            # for vac in vacancies.find({}):
+            # pprint([i for i in vacancies.find()])
+            # for i in range(len(url_list)):
+            #     if url_list[i] in vacancies.find_one({'url': url_list[i]}):
+            #         print('True')
+            # print(vacancies.find_one('url': url_list[i for i in range(len(url_list))]))
+
             break
 
 
 
-client = MongoClient('127.0.0.1', 27017)
-db = client['parsed_hh']
-vacancies = db['vacancies']
-with open('task03_sj.json', 'r', encoding='utf8') as file:
-    file_data = json.load(file)
-    # print(file_data)
-if isinstance(file_data, list):
-    vacancies.insert_many(file_data)
-else:
-    vacancies.insert_one(file_data)
+# client = MongoClient('127.0.0.1', 27017)
+# db = client['parsed_sj']
+# vacancies = db['vacancies']
+# with open('task03_sj.json', 'r', encoding='utf8') as file:
+#     file_data = json.load(file)
+#     # print(file_data)
+# if isinstance(file_data, list):
+#     for data in vacancies:
+#         # print(data)
+#         vacancies.insert_one(
+#             {'_id': vacancies.value(),
+#
+#              }
+#         )
+# else:
+#     vacancies.insert_one(file_data)
+#
 
 
-for vac in vacancies.find({}):
-    pprint(vac)
+#
+# client = MongoClient('127.0.0.1', 27017)
+
+# for vac in vacancies.find({}):
+
+
+# db = client['parsed_sj']
+# vacancies = db['vacancies']
+# # vacancies.delete_many({})
+# for i in vacancies.find({}):
+#     print(f'there is {i}')
+
 
 if __name__ == '__main__':
     # hh_parsing()

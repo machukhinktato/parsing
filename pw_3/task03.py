@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as bs
 from pprint import pprint
 from datetime import datetime
+from pymongo import MongoClient
 import json
 import requests
 import re
@@ -42,13 +43,13 @@ headers = {
 
 def hh_parsing():
     vac_desc_list = {}
-    vacancy_pick = input('please, enter vacancy name: ').lower()
+    # vacancy_pick = input('please, enter vacancy name: ').lower()
 
     params_hh = {
         'area': '1',
         'fromSearchLine': 'true',
         'st': 'searchVacancy',
-        'text': vacancy_pick,
+        'text': 'python',
         'from': 'suggest_post',
         # 'experience': 'noExperience',
         'page': 0,
@@ -83,8 +84,11 @@ def hh_parsing():
 
         for i in range(len(vacancy)):
             if vacancy[i] in vac_desc_list.keys():
-                vacancy[i] = f'{vacancy[i]} - from {datetime.now()}'
+                vacancy[i] = f'{vacancy[i]} - from {datetime.date()}'
             vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
+
+        # vac_data.insert_many(vac_desc_list)
+
         if vac_desc_list:
             print(vac_desc_list)
             with open('task03_hh.json', 'w', encoding='utf-8') as f:
@@ -98,7 +102,6 @@ def hh_parsing():
 
 
 def sj_parsing():
-
     sj_main_link = 'https://www.superjob.ru'
     sj_search_link = '/vacancy/search/'
     params = {
@@ -142,9 +145,9 @@ def sj_parsing():
                     salary_list.append([start, end, unit])
 
         for i in range(len(vacancies_list)):
-            if vacancies_list[i] in vacancy_description.keys():
-                vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.now()}'
-            vacancy_description.setdefault(vacancies_list[i], [salary_list[i], url_list[i]])
+            # if vacancies_list[i] in vacancy_description.keys():
+            #     vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.hour}'
+            vacancy_description.setdefault(i, [vacancies_list[i], salary_list[i], url_list[i]])
         if vacancy_description:
             with open('task03_sj.json', 'w', encoding='utf-8') as f:
                 json.dump(vacancy_description, f, indent=2, ensure_ascii=False)
@@ -156,7 +159,22 @@ def sj_parsing():
             break
 
 
+
+client = MongoClient('127.0.0.1', 27017)
+db = client['parsed_hh']
+vacancies = db['vacancies']
+with open('task03_sj.json', 'r', encoding='utf8') as file:
+    file_data = json.load(file)
+    # print(file_data)
+if isinstance(file_data, list):
+    vacancies.insert_many(file_data)
+else:
+    vacancies.insert_one(file_data)
+
+
+for vac in vacancies.find({}):
+    pprint(vac)
+
 if __name__ == '__main__':
-    hh_parsing()
-    # pprint(sj_parsing())
+    # hh_parsing()
     sj_parsing()

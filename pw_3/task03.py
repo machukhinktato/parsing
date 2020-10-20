@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup as bs
 from pprint import pprint
+from datetime import datetime
 import json
 import requests
 import re
@@ -105,38 +106,59 @@ def sj_parsing():
     response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
     parsed_html = bs(response.text, 'html.parser')
     data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
-    vacancies_list, salary_list, url_list = [], [], []
-
-    test_list = []
+    vacancies_list, salary_list, url_list, compensation_list = [], [], [], []
+    vacancy_description = {}
     for data in data_list:
         vacancies_list.append(data.find('a').text)
-        salary_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
+        compensation_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
         url_route = data.find('a').get('href')
         url_list.append(sj_main_link + url_route)
-        # print(salary_list)
-    if salary_list:
-        for salary in salary_list:
-            # start, end, unit = None, None, None
-            if salary.find('—') != -1:
-                start = ''.join([char for char in salary.split('—')[0] if char.isdigit()])
-                end = ''.join([char for char in salary.split('—')[1] if char.isdigit()])
-                test_list.append([start, end])
-            elif salary.find('от') != -1:
-                start, end = ''.join([char for char in salary if char.isdigit()]), None
-                test_list.append([start, end])
+    print(len(vacancies_list))
+    if compensation_list:
+        # print(compensation_list)
+        for compensation in compensation_list:
+            # print(salary)
+            if 'руб' in compensation:
+                unit = 'руб'
+            elif 'usd' in compensation:
+                unit = 'usd'
+            elif 'eur' in compensation:
+                unit = 'eur'
+            else:
+                start, end, unit = None, None, None
+                salary_list.append([start, end, unit])
+                continue
+
+            if compensation.find('—') != -1:
+                start = ''.join([char for char in compensation.split('—')[0] if char.isdigit()])
+                end = ''.join([char for char in compensation.split('—')[1] if char.isdigit()])
+                # if 'руб' in salary:
+                #     unit = 'руб'
+                salary_list.append([start, end, unit])
+            elif compensation.find('от') != -1:
+                start, end = ''.join([char for char in compensation if char.isdigit()]), None
+                # unit = re.search('руб' | 'eur' | 'usd', salary)
+                salary_list.append([start, end, unit])
                 # print(start, end)
-            elif salary.find('до ') != -1:
+            # elif compensation.find('до ') != -1:
                 # print(salary)
-                start, end = None, ''.join([char for char in salary if char.isdigit()])
-                test_list.append([start, end])
+                # start, end = None, ''.join([char for char in compensation if char.isdigit()])
+                # unit = re.search('руб' | 'eur' | 'usd', salary)
+                # salary_list.append([start, end, unit])
                 # print(f' start: {start}, end: {end}')
             else:
-                test_list.append([start, end])
-    pprint(test_list)
+                start, end = None, ''.join([char for char in compensation if char.isdigit()])
+                salary_list.append([start, end, unit])
 
-    return len(vacancies_list), len(salary_list), len(url_list)
+    for i in range(len(vacancies_list)):
+        if vacancies_list[i] in vacancy_description.keys():
+            vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.now()}'
+        print(vacancies_list[i])
+        vacancy_description.setdefault(vacancies_list[i], [salary_list[i], url_list[i]])
 
+    # return vacancy_description['Python developer']
+    return vacancy_description
 
 if __name__ == '__main__':
     # hh_parsing()
-    print(sj_parsing())
+    pprint(sj_parsing())

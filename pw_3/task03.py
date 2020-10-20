@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 from pprint import pprint
 import json
 import requests
+import re
 
 
 def int_maker(str_value):
@@ -104,12 +105,19 @@ def sj_parsing():
     response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
     parsed_html = bs(response.text, 'html.parser')
     data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
-    vacancies_list, salary_list = [], []
+    vacancies_list, salary_list, url_list = [], [], []
+    start, end, unit = None, None, None
     for data in data_list:
         vacancies_list.append(data.find('a').text)
-        salary_list.append(data.find('span', {'class':'_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
+        salary_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
+        url_route = data.find('a').get('href')
+        url_list.append(sj_main_link + url_route)
+        # if salary_list:
 
-    return len(vacancies_list), len(salary_list)
+    pprint(salary_list)
+
+    return len(vacancies_list), len(salary_list), len(url_list)
+
 
 if __name__ == '__main__':
     # hh_parsing()

@@ -85,7 +85,7 @@ def hh_parsing():
             vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
         if vac_desc_list:
             print(vac_desc_list)
-            with open('task03.json', 'w', encoding='utf-8') as f:
+            with open('task03_hh.json', 'w', encoding='utf-8') as f:
                 json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
         next_page = soup.find('a', {'data-qa': 'pager-next'})
         if next_page:
@@ -95,70 +95,66 @@ def hh_parsing():
 
 
 def sj_parsing():
+
     sj_main_link = 'https://www.superjob.ru'
     sj_search_link = '/vacancy/search/'
     params = {
         'keywords': 'python',
         'geo': 'python',
-        'page': '1',
+        'page': 0,
     }
-    # while True:
-    response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
-    parsed_html = bs(response.text, 'html.parser')
-    data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
-    vacancies_list, salary_list, url_list, compensation_list = [], [], [], []
     vacancy_description = {}
-    for data in data_list:
-        vacancies_list.append(data.find('a').text)
-        compensation_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
-        url_route = data.find('a').get('href')
-        url_list.append(sj_main_link + url_route)
-    print(len(vacancies_list))
-    if compensation_list:
-        # print(compensation_list)
-        for compensation in compensation_list:
-            # print(salary)
-            if 'руб' in compensation:
-                unit = 'руб'
-            elif 'usd' in compensation:
-                unit = 'usd'
-            elif 'eur' in compensation:
-                unit = 'eur'
-            else:
-                start, end, unit = None, None, None
-                salary_list.append([start, end, unit])
-                continue
+    while True:
+        response = requests.get(sj_main_link + sj_search_link, params=params, headers=headers)
+        parsed_html = bs(response.text, 'html.parser')
+        data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
+        vacancies_list, salary_list, url_list, compensation_list = [], [], [], []
+        for data in data_list:
+            vacancies_list.append(data.find('a').text)
+            compensation_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
+            url_route = data.find('a').get('href')
+            url_list.append(sj_main_link + url_route)
+        print(len(vacancies_list))
+        if compensation_list:
+            for compensation in compensation_list:
+                if 'руб' in compensation:
+                    unit = 'руб'
+                elif 'usd' in compensation:
+                    unit = 'usd'
+                elif 'eur' in compensation:
+                    unit = 'eur'
+                else:
+                    start, end, unit = None, None, None
+                    salary_list.append([start, end, unit])
+                    continue
 
-            if compensation.find('—') != -1:
-                start = ''.join([char for char in compensation.split('—')[0] if char.isdigit()])
-                end = ''.join([char for char in compensation.split('—')[1] if char.isdigit()])
-                # if 'руб' in salary:
-                #     unit = 'руб'
-                salary_list.append([start, end, unit])
-            elif compensation.find('от') != -1:
-                start, end = ''.join([char for char in compensation if char.isdigit()]), None
-                # unit = re.search('руб' | 'eur' | 'usd', salary)
-                salary_list.append([start, end, unit])
-                # print(start, end)
-            # elif compensation.find('до ') != -1:
-                # print(salary)
-                # start, end = None, ''.join([char for char in compensation if char.isdigit()])
-                # unit = re.search('руб' | 'eur' | 'usd', salary)
-                # salary_list.append([start, end, unit])
-                # print(f' start: {start}, end: {end}')
-            else:
-                start, end = None, ''.join([char for char in compensation if char.isdigit()])
-                salary_list.append([start, end, unit])
+                if compensation.find('—') != -1:
+                    start = ''.join([char for char in compensation.split('—')[0] if char.isdigit()])
+                    end = ''.join([char for char in compensation.split('—')[1] if char.isdigit()])
+                    salary_list.append([start, end, unit])
+                elif compensation.find('от') != -1:
+                    start, end = ''.join([char for char in compensation if char.isdigit()]), None
+                    salary_list.append([start, end, unit])
+                else:
+                    start, end = None, ''.join([char for char in compensation if char.isdigit()])
+                    salary_list.append([start, end, unit])
 
-    for i in range(len(vacancies_list)):
-        if vacancies_list[i] in vacancy_description.keys():
-            vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.now()}'
-        print(vacancies_list[i])
-        vacancy_description.setdefault(vacancies_list[i], [salary_list[i], url_list[i]])
+        for i in range(len(vacancies_list)):
+            if vacancies_list[i] in vacancy_description.keys():
+                vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.now()}'
+            vacancy_description.setdefault(vacancies_list[i], [salary_list[i], url_list[i]])
+        if vacancy_description:
+            with open('task03_sj.json', 'w', encoding='utf-8') as f:
+                json.dump(vacancy_description, f, indent=2, ensure_ascii=False)
+        next_page = parsed_html.find('a', {'class': ['icMQ_ _1_Cht _3ze9n f-test-button-dalshe f-test-link-Dalshe']})
+        if next_page:
+            params['page'] += 1
+        else:
+            return vacancy_description
+            break
 
-    # return vacancy_description['Python developer']
-    return vacancy_description
 
 if __name__ == '__main__':
-    # hh_parsing()
-    pprint(sj_parsing())
+    hh_parsing()
+    # pprint(sj_parsing())
+    sj_parsing()

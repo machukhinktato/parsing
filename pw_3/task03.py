@@ -82,6 +82,8 @@ def hh_parsing():
             salary.append(all_cats)
 
         for i in range(len(vacancy)):
+            if vacancy[i] in vac_desc_list.keys():
+                vacancy[i] = f'{vacancy[i]} - from {datetime.now()}'
             vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
         if vac_desc_list:
             print(vac_desc_list)
@@ -89,8 +91,9 @@ def hh_parsing():
                 json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
         next_page = soup.find('a', {'data-qa': 'pager-next'})
         if next_page:
-            params['page'] += 1
+            params_hh['page'] += 1
         else:
+            return vac_desc_list
             break
 
 
@@ -114,7 +117,6 @@ def sj_parsing():
             compensation_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
             url_route = data.find('a').get('href')
             url_list.append(sj_main_link + url_route)
-        print(len(vacancies_list))
         if compensation_list:
             for compensation in compensation_list:
                 if 'руб' in compensation:

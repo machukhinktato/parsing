@@ -106,15 +106,33 @@ def sj_parsing():
     parsed_html = bs(response.text, 'html.parser')
     data_list = parsed_html.findAll('div', {'class': 'jNMYr GPKTZ _1tH7S'})
     vacancies_list, salary_list, url_list = [], [], []
-    start, end, unit = None, None, None
+
+    test_list = []
     for data in data_list:
         vacancies_list.append(data.find('a').text)
         salary_list.append(data.find('span', {'class': '_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'}).text)
         url_route = data.find('a').get('href')
         url_list.append(sj_main_link + url_route)
-        # if salary_list:
-
-    pprint(salary_list)
+        # print(salary_list)
+    if salary_list:
+        for salary in salary_list:
+            # start, end, unit = None, None, None
+            if salary.find('—') != -1:
+                start = ''.join([char for char in salary.split('—')[0] if char.isdigit()])
+                end = ''.join([char for char in salary.split('—')[1] if char.isdigit()])
+                test_list.append([start, end])
+            elif salary.find('от') != -1:
+                start, end = ''.join([char for char in salary if char.isdigit()]), None
+                test_list.append([start, end])
+                # print(start, end)
+            elif salary.find('до ') != -1:
+                # print(salary)
+                start, end = None, ''.join([char for char in salary if char.isdigit()])
+                test_list.append([start, end])
+                # print(f' start: {start}, end: {end}')
+            else:
+                test_list.append([start, end])
+    pprint(test_list)
 
     return len(vacancies_list), len(salary_list), len(url_list)
 

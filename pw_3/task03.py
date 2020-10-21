@@ -53,7 +53,7 @@ def hh_parsing():
         'st': 'searchVacancy',
         'text': 'python',
         'from': 'suggest_post',
-        # 'experience': 'noExperience',
+        'experience': 'noExperience',
         'page': 0,
     }
 

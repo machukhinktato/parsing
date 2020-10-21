@@ -217,13 +217,13 @@ def sj_parsing():
 # for vac in vacancies.find({}):
 
 
-# db = client['parsed_sj']
-# vacancies = db['vacancies']
+db = client['parsed_sj']
+vacancies = db['vacancies']
 # # vacancies.delete_many({})
-# for i in vacancies.find({}):
-#     print(f'there is {i}')
+for i in vacancies.find({"url": "https://www.superjob.ru/vakansii/backend-razrabotchik-34111905.html"}):
+    print(i)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # hh_parsing()
-    sj_parsing()
+    # sj_parsing()

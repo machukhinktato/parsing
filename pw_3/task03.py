@@ -6,8 +6,29 @@ import json
 import requests
 import re
 
+# https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
+# https://www.superjob.ru/vacancy/search/?keywords=python&geo%5Bt%5D%5B0%5D=4&page=2
 
-client = MongoClient('127.0.0.1', 27017)
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                  'AppleWebKit/537.36 (KHTML, like Gecko) '
+                  'Chrome/86.0.4240.75 Safari/537.36',
+}
+
+
+def sj_mongo_db():
+    client = MongoClient('127.0.0.1', 27017)
+    db = client['parsed_sj']
+    vacancies = db['vacancies']
+    return vacancies
+
+
+def hh_mongo_db():
+    client = MongoClient('127.0.0.1', 27017)
+    db = client['parsed_hh']
+    vacancies = db['vacancies']
+    return vacancies
+
 
 def int_maker(str_value):
     converter, result = [], []
@@ -31,16 +52,6 @@ def value_delimitter(compensation):
         else:
             continue
     return first_val, second_val
-
-
-# https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&text=Python
-# https://www.superjob.ru/vacancy/search/?keywords=python&geo%5Bt%5D%5B0%5D=4&page=2
-
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-                  'AppleWebKit/537.36 (KHTML, like Gecko) '
-                  'Chrome/86.0.4240.75 Safari/537.36',
-}
 
 
 def hh_parsing():
@@ -89,12 +100,35 @@ def hh_parsing():
                 vacancy[i] = f'{vacancy[i]} - from {datetime.date()}'
             vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
 
-        # vac_data.insert_many(vac_desc_list)
+
+        db_items = []
+        for i in range(len(vacancy)):
+            vac_desc_list.setdefault(i, [vacancy[i], salary[i], links[i]])
+            id = vacancies.count_documents({})
+            for data in vacancies.find({'url': url_list[i]}):
+                db_items.append(data.get('url'))
+            if links[i] in db_items:
+                continue
+            else:
+                vacancies.insert_one({
+                    '_id': id + 1,
+                    'position': vacancies_list[i],
+                    'from': salary_list[i][0],
+                    'to': salary_list[i][1],
+                    'unit': salary_list[i][2],
+                    'url': url_list[i],
+                })
+
+
+
 
         if vac_desc_list:
-            # print(vac_desc_list)
             with open('task03_hh.json', 'w', encoding='utf-8') as f:
                 json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
+
+
+
+
         next_page = soup.find('a', {'data-qa': 'pager-next'})
         if next_page:
             params_hh['page'] += 1
@@ -104,11 +138,9 @@ def hh_parsing():
 
 
 def sj_parsing():
-
-
-    db = client['parsed_sj']
-    vacancies = db['vacancies']
-
+    # db = client['parsed_sj']
+    # vacancies = db['vacancies']
+    vacancies = sj_mongo_db()
     sj_main_link = 'https://www.superjob.ru'
     sj_search_link = '/vacancy/search/'
     params = {
@@ -151,19 +183,13 @@ def sj_parsing():
                     start, end = None, int(''.join([char for char in compensation if char.isdigit()]))
                     salary_list.append([start, end, unit])
 
+        db_items = []
         for i in range(len(vacancies_list)):
-            # if vacancies_list[i] in vacancy_description.keys():
-            #     vacancies_list[i] = f'{vacancies_list[i]} - from {datetime.hour}'
             vacancy_description.setdefault(i, [vacancies_list[i], salary_list[i], url_list[i]])
-            # if vacancy_description:
-            #     if 'task03_sj.jsopn':
-            #         with open('task03_sj.json', 'w', encoding='utf-8') as f:
-            #             json.dumps(vacancy_description, f, indent=2, ensure_ascii=False)
             id = vacancies.count_documents({})
-            # print(url_list[i])
-            # for item in vacancies.find({}):
-            #     print(item)
-            if url_list[i] in vacancies.find({}):
+            for vacancy in vacancies.find({'url': url_list[i]}):
+                db_items.append(vacancy.get('url'))
+            if url_list[i] in db_items:
                 continue
             else:
                 vacancies.insert_one({
@@ -181,15 +207,7 @@ def sj_parsing():
         if next_page:
             params['page'] += 1
         else:
-            # for vac in vacancies.find({}):
-            # pprint([i for i in vacancies.find()])
-            # for i in range(len(url_list)):
-            #     if url_list[i] in vacancies.find_one({'url': url_list[i]}):
-            #         print('True')
-            # print(vacancies.find_one('url': url_list[i for i in range(len(url_list))]))
-
             break
-
 
 
 # client = MongoClient('127.0.0.1', 27017)
@@ -216,14 +234,22 @@ def sj_parsing():
 
 # for vac in vacancies.find({}):
 
+def sj_db():
+    vacancies = sj_mongo_db()
+    # vacancies.delete_many({})
+    for i in vacancies.find({}):
+        print(i)
 
-db = client['parsed_sj']
-vacancies = db['vacancies']
-# # vacancies.delete_many({})
-for i in vacancies.find({"url": "https://www.superjob.ru/vakansii/backend-razrabotchik-34111905.html"}):
-    print(i)
+
+def hh_db():
+    vacancies = hh_mongo_db()
+    # vacancies.delete_many({})
+    for i in vacancies.find({}):
+        print(i)
 
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
     # hh_parsing()
-    # sj_parsing()
+    # hh_db()
+    sj_parsing()
+    sj_db()

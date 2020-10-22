@@ -241,9 +241,19 @@ def hh_db():
     for i in vacancies.find({}):
         print(i)
 
+def salary_finder():
+    result_list = []
+    hh_vacancies = hh_mongo_db()
+    sj_vacancies = sj_mongo_db()
+    user_pick = int(input('which compensation you want receive? '))
+    for start_sum in hh_vacancies.find({'from': {'$gt': user_pick}}):
+        for final_sum in hh_vacancies.find({'to': {'$gt': user_pick}}):
+            result_list.append(final_sum if final_sum.get('to') >= start_sum.get('from') else start_sum)
+    pprint([i for i in result_list])
 
 if __name__ == '__main__':
-    hh_parsing()
-    hh_db()
+    # hh_parsing()
+    # hh_db()
     # sj_parsing()
     # sj_db()
+    salary_finder()

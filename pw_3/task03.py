@@ -55,6 +55,7 @@ def value_delimitter(compensation):
 
 
 def hh_parsing():
+    vacancies = hh_mongo_db()
     vac_desc_list = {}
     # vacancy_pick = input('please, enter vacancy name: ').lower()
 
@@ -80,7 +81,7 @@ def hh_parsing():
             vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
             compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
             start, end, unit = None, None, None
-            all_cats = []
+            # all_cats = []
             if compensation:
                 for offered_sum in compensation:
                     start, end = value_delimitter(offered_sum)
@@ -90,50 +91,43 @@ def hh_parsing():
                         unit = 'usd'
                     else:
                         unit = 'eur'
-            all_cats.append(start)
-            all_cats.append(end)
-            all_cats.append(unit)
-            salary.append(all_cats)
-
-        for i in range(len(vacancy)):
-            if vacancy[i] in vac_desc_list.keys():
-                vacancy[i] = f'{vacancy[i]} - from {datetime.date()}'
-            vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
-
+            # all_cats.append(start)
+            # all_cats.append(end)
+            # all_cats.append(unit)
+            # salary.append(all_cats)
+            salary.append([start, end, unit])
+        #
+        # for i in range(len(vacancy)):
+        #     if vacancy[i] in vac_desc_list.keys():
+        #         vacancy[i] = f'{vacancy[i]} - from {datetime.date()}'
+        #     vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
+        #
 
         db_items = []
         for i in range(len(vacancy)):
             vac_desc_list.setdefault(i, [vacancy[i], salary[i], links[i]])
             id = vacancies.count_documents({})
-            for data in vacancies.find({'url': url_list[i]}):
+            for data in vacancies.find({'url': links[i]}):
                 db_items.append(data.get('url'))
             if links[i] in db_items:
                 continue
             else:
                 vacancies.insert_one({
                     '_id': id + 1,
-                    'position': vacancies_list[i],
-                    'from': salary_list[i][0],
-                    'to': salary_list[i][1],
-                    'unit': salary_list[i][2],
-                    'url': url_list[i],
+                    'position': vacancy[i],
+                    'from': salary[i][0],
+                    'to': salary[i][1],
+                    'unit': salary[i][2],
+                    'url': links[i],
                 })
 
-
-
-
-        if vac_desc_list:
-            with open('task03_hh.json', 'w', encoding='utf-8') as f:
-                json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
-
-
-
+                with open('task03_hh.json', 'w', encoding='utf-8') as f:
+                    json.dump(vac_desc_list, f, indent=2, ensure_ascii=False)
 
         next_page = soup.find('a', {'data-qa': 'pager-next'})
         if next_page:
             params_hh['page'] += 1
         else:
-            return vac_desc_list
             break
 
 
@@ -249,7 +243,7 @@ def hh_db():
 
 
 if __name__ == '__main__':
-    # hh_parsing()
-    # hh_db()
-    sj_parsing()
-    sj_db()
+    hh_parsing()
+    hh_db()
+    # sj_parsing()
+    # sj_db()

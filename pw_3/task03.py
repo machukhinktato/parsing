@@ -241,6 +241,7 @@ def hh_db():
     for i in vacancies.find({}):
         print(i)
 
+
 def salary_finder():
     result_list = []
     hh_vacancies = hh_mongo_db()
@@ -249,13 +250,18 @@ def salary_finder():
     # shor_list = []
     for start_sum in hh_vacancies.find({'from': {'$gt': user_pick}}):
         for final_sum in hh_vacancies.find({'to': {'$gt': user_pick}}):
-            result_list.append(final_sum if final_sum.get('to') >= start_sum.get('from') else start_sum)
-    for item in result_list:
-        if '_id' in result_list:
-            result_list.pop(item)
-        else:
-            pprint([result_list])
-    # pprint(set(result_list))
+            if final_sum in result_list or start_sum in result_list:
+                continue
+            else:
+                result_list.append(final_sum if final_sum.get('to') >= start_sum.get('from') else start_sum)
+    for start_sum in sj_vacancies.find({'from': {'$gt': user_pick}}):
+        for final_sum in sj_vacancies.find({'to': {'$gt': user_pick}}):
+            if final_sum in result_list or start_sum in result_list:
+                continue
+            else:
+                result_list.append(final_sum if final_sum.get('to') >= start_sum.get('from') else start_sum)
+    pprint(result_list)
+
 
 if __name__ == '__main__':
     # hh_parsing()

@@ -1,5 +1,14 @@
 {
   "0": [
+    "Junior Python Developer",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/40002668?query=python"
+  ],
+  "1": [
     "Junior Python разработчик/Аналитик",
     [
       null,
@@ -8,7 +17,7 @@
     ],
     "https://hh.ru/vacancy/39947828?query=python"
   ],
-  "1": [
+  "2": [
     "Senior Python Backend Developer",
     [
       250000,
@@ -17,7 +26,16 @@
     ],
     "https://hh.ru/vacancy/39730720?query=python"
   ],
-  "2": [
+  "3": [
+    "Python разработчик",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/40007977?query=python"
+  ],
+  "4": [
     "Тестировщик/Web-программист",
     [
       null,
@@ -26,7 +44,7 @@
     ],
     "https://hh.ru/vacancy/39887888?query=python"
   ],
-  "3": [
+  "5": [
     "Разработчик на Python (Full stack)",
     [
       180000,
@@ -35,7 +53,7 @@
     ],
     "https://hh.ru/vacancy/39349530?query=python"
   ],
-  "4": [
+  "6": [
     "Разработчик Python",
     [
       70000,
@@ -44,7 +62,7 @@
     ],
     "https://hh.ru/vacancy/39849346?query=python"
   ],
-  "5": [
+  "7": [
     "PHP-программист",
     [
       null,
@@ -53,7 +71,7 @@
     ],
     "https://hh.ru/vacancy/39939292?query=python"
   ],
-  "6": [
+  "8": [
     "Разработчик Python",
     [
       null,
@@ -62,7 +80,7 @@
     ],
     "https://hh.ru/vacancy/39749516?query=python"
   ],
-  "7": [
+  "9": [
     "Разработчик Python",
     [
       null,
@@ -71,16 +89,7 @@
     ],
     "https://hh.ru/vacancy/39713131?query=python"
   ],
-  "8": [
-    "Senior Python разработчик",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38846825?query=python"
-  ],
-  "9": [
+  "10": [
     "Django разработчик (удаленка)",
     [
       50000,
@@ -89,7 +98,16 @@
     ],
     "https://hh.ru/vacancy/39708846?query=python"
   ],
-  "10": [
+  "11": [
+    "Senior Python разработчик",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/38846825?query=python"
+  ],
+  "12": [
     "JavaScript/Python developer SberDevices",
     [
       null,
@@ -98,7 +116,7 @@
     ],
     "https://hh.ru/vacancy/39665742?query=python"
   ],
-  "11": [
+  "13": [
     "Стажер-разработчик (VBA, SQL, Python)",
     [
       null,
@@ -107,7 +125,7 @@
     ],
     "https://hh.ru/vacancy/38936908?query=python"
   ],
-  "12": [
+  "14": [
     "Team Lead C++\\Python",
     [
       null,
@@ -116,16 +134,7 @@
     ],
     "https://hh.ru/vacancy/38075049?query=python"
   ],
-  "13": [
-    "Senior Python Developer",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39069567?query=python"
-  ],
-  "14": [
+  "15": [
     "Разработчик Python",
     [
       null,
@@ -134,7 +143,7 @@
     ],
     "https://hh.ru/vacancy/38453029?query=python"
   ],
-  "15": [
+  "16": [
     "Python разработчик (ИСУ)",
     [
       null,
@@ -143,7 +152,16 @@
     ],
     "https://hh.ru/vacancy/39595961?query=python"
   ],
-  "16": [
+  "17": [
+    "Senior Python Developer",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39069567?query=python"
+  ],
+  "18": [
     "Big Data (Hadoop/scala/java/python) разработчик",
     [
       null,
@@ -152,16 +170,16 @@
     ],
     "https://hh.ru/vacancy/39475556?query=python"
   ],
-  "17": [
-    "Experienced Full-stack Developer - Remote",
+  "19": [
+    "Аналитик",
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39985716?query=python"
+    "https://hh.ru/vacancy/39984356?query=python"
   ],
-  "18": [
+  "20": [
     "Junior Python разработчик",
     [
       null,
@@ -170,7 +188,7 @@
     ],
     "https://hh.ru/vacancy/39911626?query=python"
   ],
-  "19": [
+  "21": [
     "Младший разработчик Python / программист (удаленно)",
     [
       40000,
@@ -179,7 +197,7 @@
     ],
     "https://hh.ru/vacancy/39965368?query=python"
   ],
-  "20": [
+  "22": [
     "Младший python разработчик",
     [
       null,
@@ -188,7 +206,7 @@
     ],
     "https://hh.ru/vacancy/39714347?query=python"
   ],
-  "21": [
+  "23": [
     "Senior Data Science Engineer",
     [
       null,
@@ -197,7 +215,7 @@
     ],
     "https://hh.ru/vacancy/39661232?query=python"
   ],
-  "22": [
+  "24": [
     "Data science",
     [
       null,
@@ -206,7 +224,7 @@
     ],
     "https://hh.ru/vacancy/39147890?query=python"
   ],
-  "23": [
+  "25": [
     "Младший аналитик данных / Junior Data science",
     [
       null,
@@ -215,7 +233,7 @@
     ],
     "https://hh.ru/vacancy/39549240?query=python"
   ],
-  "24": [
+  "26": [
     "Инженер-стажер по автоматизированному тестированию",
     [
       null,
@@ -224,7 +242,7 @@
     ],
     "https://hh.ru/vacancy/39963821?query=python"
   ],
-  "25": [
+  "27": [
     "Junior программист C++",
     [
       50000,
@@ -233,7 +251,34 @@
     ],
     "https://hh.ru/vacancy/39952213?query=python"
   ],
-  "26": [
+  "28": [
+    "Стажер data scientist",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39994212?query=python"
+  ],
+  "29": [
+    "Junior ML Engineer",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39661595?query=python"
+  ],
+  "30": [
+    "Специалист по тестированию",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/40003294?query=python"
+  ],
+  "31": [
     "Data Scientist",
     [
       null,
@@ -242,16 +287,16 @@
     ],
     "https://hh.ru/vacancy/39939783?query=python"
   ],
-  "27": [
+  "32": [
     "Data Engineer",
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39633497?query=python"
+    "https://hh.ru/vacancy/40008741?query=python"
   ],
-  "28": [
+  "33": [
     "Senior Data Analyst",
     [
       null,
@@ -260,7 +305,7 @@
     ],
     "https://hh.ru/vacancy/38590175?query=python"
   ],
-  "29": [
+  "34": [
     "Data Engineer",
     [
       null,
@@ -269,16 +314,7 @@
     ],
     "https://hh.ru/vacancy/39982020?query=python"
   ],
-  "30": [
-    "Data scientist (портфельное моделирование)",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39390424?query=python"
-  ],
-  "31": [
+  "35": [
     "Full-Stack Разработчик",
     [
       100000,
@@ -287,7 +323,7 @@
     ],
     "https://hh.ru/vacancy/39514738?query=python"
   ],
-  "32": [
+  "36": [
     "PHP-разработчик",
     [
       null,
@@ -296,7 +332,7 @@
     ],
     "https://hh.ru/vacancy/39802762?query=python"
   ],
-  "33": [
+  "37": [
     "Full Stack разработчик",
     [
       160000,
@@ -305,7 +341,7 @@
     ],
     "https://hh.ru/vacancy/39482966?query=python"
   ],
-  "34": [
+  "38": [
     "Программист",
     [
       60000,
@@ -314,16 +350,16 @@
     ],
     "https://hh.ru/vacancy/39956367?query=python"
   ],
-  "35": [
-    "Data scientist (NLP/OCR/CV)",
+  "39": [
+    "Стажер SAP BI/BW (поддержка)",
     [
       null,
-      null,
-      null
+      35000,
+      "руб"
     ],
-    "https://hh.ru/vacancy/39910879?query=python"
+    "https://hh.ru/vacancy/35433946?query=python"
   ],
-  "36": [
+  "40": [
     "Тестировщик Яндекс.Еда (бекэнд)",
     [
       null,
@@ -332,25 +368,34 @@
     ],
     "https://hh.ru/vacancy/39955126?query=python"
   ],
-  "37": [
-    "Программист-математик",
+  "41": [
+    "Data Engineer",
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39524752?query=python"
+    "https://hh.ru/vacancy/39633497?query=python"
   ],
-  "38": [
-    "Data engineer (Комплаенс)",
+  "42": [
+    "Data scientist (портфельное моделирование)",
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/39947769?query=python"
+    "https://hh.ru/vacancy/39390424?query=python"
   ],
-  "39": [
+  "43": [
+    "Analytics and Consulting Intern",
+    [
+      null,
+      null,
+      null
+    ],
+    "https://hh.ru/vacancy/39996782?query=python"
+  ],
+  "44": [
     "DevOps Engineer",
     [
       null,
@@ -359,16 +404,7 @@
     ],
     "https://hh.ru/vacancy/39564586?query=python"
   ],
-  "40": [
-    "Firmware Engineering Intern",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/39912584?query=python"
-  ],
-  "41": [
+  "45": [
     "Стажёр в отдел ИТ/IT trainee",
     [
       null,
@@ -377,7 +413,7 @@
     ],
     "https://hh.ru/vacancy/39934827?query=python"
   ],
-  "42": [
+  "46": [
     "Младший инженер по внедрению и техподдержке телекоммуникационного биллинга (Зеленоград)",
     [
       60000,
@@ -386,16 +422,7 @@
     ],
     "https://hh.ru/vacancy/39475435?query=python"
   ],
-  "43": [
-    "Data scientist в Дивизион `Массовая персонализация`",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38527809?query=python"
-  ],
-  "44": [
+  "47": [
     "Преподаватель курса по направлению Data Science",
     [
       null,
@@ -404,49 +431,22 @@
     ],
     "https://hh.ru/vacancy/38795381?query=python"
   ],
-  "45": [
-    "Стажер-разработчик Java",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38055618?query=python"
-  ],
-  "46": [
-    "Data engineer (управление Благосостоянием)",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38033622?query=python"
-  ],
-  "47": [
-    "Стажер в отдел аналитики (Data Analytics)",
-    [
-      null,
-      null,
-      null
-    ],
-    "https://hh.ru/vacancy/38720090?query=python"
-  ],
   "48": [
-    "Инженер данных (Дата инженер) в управление обработки и подготовки данных",
+    "Системный администратор (стажер)",
     [
       null,
       null,
       null
     ],
-    "https://hh.ru/vacancy/37363786?query=python"
+    "https://hh.ru/vacancy/39566283?query=python"
   ],
   "49": [
-    "Ruby On Rails Developer",
+    "Программист-математик",
     [
-      120000,
-      170000,
-      "руб"
+      null,
+      null,
+      null
     ],
-    "https://hh.ru/vacancy/39981420?query=python"
+    "https://hh.ru/vacancy/39524752?query=python"
   ]
 }

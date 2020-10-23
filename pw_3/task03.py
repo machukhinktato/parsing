@@ -81,7 +81,6 @@ def hh_parsing():
             vacancy.append(val.find('a', {'data-qa': 'vacancy-serp__vacancy-title'}).text)
             compensation = val.findAll(attrs={'data-qa': 'vacancy-serp__vacancy-compensation'})
             start, end, unit = None, None, None
-            # all_cats = []
             if compensation:
                 for offered_sum in compensation:
                     start, end = value_delimitter(offered_sum)
@@ -91,18 +90,7 @@ def hh_parsing():
                         unit = 'usd'
                     else:
                         unit = 'eur'
-            # all_cats.append(start)
-            # all_cats.append(end)
-            # all_cats.append(unit)
-            # salary.append(all_cats)
             salary.append([start, end, unit])
-        #
-        # for i in range(len(vacancy)):
-        #     if vacancy[i] in vac_desc_list.keys():
-        #         vacancy[i] = f'{vacancy[i]} - from {datetime.date()}'
-        #     vac_desc_list.setdefault(vacancy[i], [salary[i], links[i]])
-        #
-
         db_items = []
         for i in range(len(vacancy)):
             vac_desc_list.setdefault(i, [vacancy[i], salary[i], links[i]])
@@ -132,8 +120,6 @@ def hh_parsing():
 
 
 def sj_parsing():
-    # db = client['parsed_sj']
-    # vacancies = db['vacancies']
     vacancies = sj_mongo_db()
     sj_main_link = 'https://www.superjob.ru'
     sj_search_link = '/vacancy/search/'
@@ -204,30 +190,6 @@ def sj_parsing():
             break
 
 
-# client = MongoClient('127.0.0.1', 27017)
-# db = client['parsed_sj']
-# vacancies = db['vacancies']
-# with open('task03_sj.json', 'r', encoding='utf8') as file:
-#     file_data = json.load(file)
-#     # print(file_data)
-# if isinstance(file_data, list):
-#     for data in vacancies:
-#         # print(data)
-#         vacancies.insert_one(
-#             {'_id': vacancies.value(),
-#
-#              }
-#         )
-# else:
-#     vacancies.insert_one(file_data)
-#
-
-
-#
-# client = MongoClient('127.0.0.1', 27017)
-
-# for vac in vacancies.find({}):
-
 def sj_db():
     vacancies = sj_mongo_db()
     # vacancies.delete_many({})
@@ -247,7 +209,6 @@ def salary_finder():
     hh_vacancies = hh_mongo_db()
     sj_vacancies = sj_mongo_db()
     user_pick = int(input('which compensation you want receive? '))
-    # shor_list = []
     for start_sum in hh_vacancies.find({'from': {'$gt': user_pick}}):
         for final_sum in hh_vacancies.find({'to': {'$gt': user_pick}}):
             if final_sum in result_list or start_sum in result_list:

@@ -44,20 +44,13 @@ def parsing_news_mail_ru(db_col):
 
 
 def parsing_news_lenta_ru(db_col):
-    """
-      Функция парсинга lenta.ru
-      В параметрах принимает ссылку на коллекцию в базе,
-      для запроса использует глобальные переменные
-      ничего не возвращает, но записывает данные в коллекцию
-    """
     MONTHS = {'января': '01', 'февраля': '02', 'марта': '03', 'апреля': '04', 'мая': '05', 'июня': '06',
                         'июля': '07', 'августа': '08', 'сентября': '09', 'октября': '10', 'ноября': '11', 'декабря': '12'}
     start_link = 'https://lenta.ru/'
     response = requests.get(start_link, headers=headers)
-    page = html.fromstring(response.text)  # главная страница
     main_news = page.xpath("//section[contains(@class, 'b-top7-for-main')]"
                            "/div[contains(@class, 'span4')]"
-                           "/div[contains(@class, 'item')]//time/..")  # список новостей
+                           "/div[contains(@class, 'item')]//time/..")
     for title in main_news:
         t_name = title.xpath("./text()")
         t_link = title.xpath("./@href")
@@ -80,8 +73,7 @@ def parsing_news_lenta_ru(db_col):
 def parsing_yandex_news(db_col):
     start_link = 'https://yandex.ru/news'
     response = requests.get(start_link, headers=headers)
-    page = html.fromstring(response.text)  # главная страница
-    main_news = page.xpath("//div[contains(@class, 'news-top-stories')]/div")  # список новостей
+    main_news = page.xpath("//div[contains(@class, 'news-top-stories')]/div")
     for title in main_news:
         t_name = title.xpath(".//h2[@class ='news-card__title']/text()")
         t_link = title.xpath(".//a[@href]/@href")

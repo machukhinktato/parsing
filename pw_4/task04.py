@@ -35,14 +35,26 @@ def lenta_checker():
     # news_datepub = news.xpath("//@datetime")
     # return print([i.replace(u'\xa0', u' ') for i in news_link])
     # return pprint(news_name)
-    publication, pub_date = [], []
+    # pub_name, pub_date = [], []
+    news_data = []
     for pub in news_block:
-        pb_name = pub.xpath("./../text()")
-        pb_date = pub.xpath("./@datetime")
+        pub_data = {}
+        # pb_name = pub.xpath("./../text()")
+        # pub_name.append(text_redactor(pub.xpath("./../text()")))
+        pub_name = text_redactor(pub.xpath("./../text()"))
+        # pb_date = pub.xpath("./@datetime")
         # publication.append([txt.replace(u'\xa0', u' ') for txt in pb_name])
-        pub_date.append(text_redactor(pb_date))
-
-    return pprint(pub_date)
+        # pub_date.append(text_redactor(pub.xpath("./@datetime")))
+        pub_date = text_redactor(pub.xpath("./@datetime"))
+        pub_link = link + pub.xpath("./../@href")[0]
+        pub_data = {
+            'name': pub_name,
+            'date': pub_date,
+            'link': pub_link,
+            'publisher': 'lenta.ru'
+        }
+        news_data.append(pub_data)
+    return pprint(news_data)
 
 
 if __name__ == '__main__':

@@ -24,6 +24,7 @@ def text_redactor(data):
 
 def lenta_checker():
     db = db_connection()
+    # db.delete_many({})  #turn on to clear database
     link = 'https://lenta.ru/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
@@ -49,13 +50,17 @@ def lenta_checker():
         pub_link = link + pub.xpath("./../@href")[0]
         # for data in len(pub_name):
         db_id = db.count_documents({})
-        db.insert_one({
-            '_id': db_id + 1,
-            'name': pub_name,
-            'date': pub_date,
-            'link': pub_link,
-            'publisher': 'lenta.ru'
-        })
+        check_dublicates = [i for i in db.find({})]
+        if pub_link in [i.get('link') for i in check_dublicates]:
+            continue
+        else:
+            db.insert_one({
+                '_id': db_id + 1,
+                'name': pub_name,
+                'date': pub_date,
+                'link': pub_link,
+                'publisher': 'lenta.ru'
+            })
         # pub_data = {
         #     'name': pub_name,
         #     'date': pub_date,
@@ -65,6 +70,7 @@ def lenta_checker():
         # news_data.append(pub_data)
     # return pprint(news_data)
     return pprint([i for i in db.find({})])
+    # return pprint(check_dublicates[0].get('link'))
 
 
 

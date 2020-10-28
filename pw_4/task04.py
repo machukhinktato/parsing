@@ -47,14 +47,26 @@ def lenta_checker():
         # pub_date.append(text_redactor(pub.xpath("./@datetime")))
         pub_date = text_redactor(pub.xpath("./@datetime"))
         pub_link = link + pub.xpath("./../@href")[0]
-        pub_data = {
+        # for data in len(pub_name):
+        db_id = db.count_documents({})
+        db.insert_one({
+            '_id': db_id + 1,
             'name': pub_name,
             'date': pub_date,
             'link': pub_link,
             'publisher': 'lenta.ru'
-        }
-        news_data.append(pub_data)
-    return pprint(news_data)
+        })
+        # pub_data = {
+        #     'name': pub_name,
+        #     'date': pub_date,
+        #     'link': pub_link,
+        #     'publisher': 'lenta.ru'
+        # }
+        # news_data.append(pub_data)
+    # return pprint(news_data)
+    return pprint([i for i in db.find({})])
+
+
 
 
 if __name__ == '__main__':

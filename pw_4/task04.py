@@ -82,9 +82,12 @@ def yandex_check():
     for pub in news_block:
         pub_data = {}
         pub_name = pub.xpath('.//text()')
-        # pub_link =
-        # print(pub_name)
-    return pprint([i for i in news_block])
+        pub_link = pub.xpath('.//@href')
+        mini_response = requests.get(pub_link, headers=headers)
+        mini_dom = html.fromstring(mini_response.text)
+        mini_block = mini_dom.xpath("//div[@class='news-story__subtitle-img']/img/@alt")
+        pprint(mini_block)
+    return pprint([i for i in mini_dom])
 
 
 if __name__ == '__main__':

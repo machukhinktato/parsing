@@ -1,7 +1,8 @@
-import requests
 from lxml import html
 from pymongo import MongoClient
 from datetime import datetime as dt
+from pprint import pprint
+import requests
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -10,16 +11,44 @@ headers = {
 }
 
 
-def database():
+def db_connection():
     client = MongoClient('127.0.0.1', 27017)
     db = client['PW4']
     news = db['news']
     return news
 
 
-def lenta_news():
-    response
+def text_redactor(data):
+    return [txt.replace(u'\xa0', u' ') for txt in data]
 
+
+def lenta_checker():
+    db = db_connection()
+    link = 'https://lenta.ru/'
+    response = requests.get(link, headers=headers)
+    dom = html.fromstring(response.text)
+    news_block = dom.xpath("//time[@class='g-time']")
+    # data = dom.xpath("//div[@class='span4']//text()")
+    # news_name = dom.xpath("./time[@class='g-time']/../text()")
+    # news_name = news.
+    # news_link = dom.xpath("//time[@class='g-time']/@datetime")
+    # news_datepub = news.xpath("//@datetime")
+    # return print([i.replace(u'\xa0', u' ') for i in news_link])
+    # return pprint(news_name)
+    publication, pub_date = [], []
+    for pub in news_block:
+        pb_name = pub.xpath("./../text()")
+        pb_date = pub.xpath("./@datetime")
+        # publication.append([txt.replace(u'\xa0', u' ') for txt in pb_name])
+        pub_date.append(text_redactor(pb_date))
+
+    return pprint(pub_date)
+
+
+if __name__ == '__main__':
+    # for i in
+    # pprint(lenta_checker())
+    lenta_checker()
 # def save_news_if_not_exist(db_col, title):
 #     if not db_col.find_one(title):
 #         db_col.insert_one(title)

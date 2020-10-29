@@ -75,19 +75,16 @@ def lentaru_check():
 
 def yandex_check():
     db = db_connection()
-    link = 'https://yandex.ru/'
+    link = 'https://yandex.ru/news/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
-    news_block = dom.xpath("//ol/li")
-    for pub in news_block:
-        pub_data = {}
-        pub_name = pub.xpath('.//text()')
-        pub_link = pub.xpath('.//@href')
-        mini_response = requests.get(pub_link, headers=headers)
-        mini_dom = html.fromstring(mini_response.text)
-        mini_block = mini_dom.xpath("//div[@class='news-story__subtitle-img']/img/@alt")
-        pprint(mini_block)
-    return pprint([i for i in mini_dom])
+    news_block = dom.xpath("//div[@class='mg-grid__row mg-grid__row_gap_8 news-top-stories news-app__top']//a[@href]/text()")
+    # for pub in news_block:
+    #     pub_data = {}
+    #     pub_name = pub.xpath('.//text()')
+    #     pub_link = pub.xpath('.//a/text()')
+    #     pprint(pub_link)
+    return pprint(news_block)
 
 
 if __name__ == '__main__':

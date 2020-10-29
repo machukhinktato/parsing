@@ -78,13 +78,16 @@ def yandex_check():
     link = 'https://yandex.ru/news/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
-    news_block = dom.xpath("//div[@class='mg-grid__row mg-grid__row_gap_8 news-top-stories news-app__top']//a[@href]/text()")
-    # for pub in news_block:
-    #     pub_data = {}
-    #     pub_name = pub.xpath('.//text()')
-    #     pub_link = pub.xpath('.//a/text()')
-    #     pprint(pub_link)
-    return pprint(news_block)
+    news_block = dom.xpath("//div[@class='mg-grid__row mg-grid__row_gap_8 news-top-stories news-app__top']")
+    for pub in news_block:
+        pub_data = {}
+        pub_name = pub.xpath(".//h2/text()")
+        pub_link = pub.xpath(".//h2/..//@href")
+        publisher = pub.xpath(".//a/text()")
+        pub_date = pub.xpath(".//a/text()")
+        # pprint(publisher)
+        pprint(pub_link)
+    # return pprint(news_block)
 
 
 if __name__ == '__main__':

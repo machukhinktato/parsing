@@ -15,7 +15,8 @@ def db_connection():
     client = MongoClient('127.0.0.1', 27017)
     db = client['PW4']
     schema = db['news']
-    return schema
+    parsing_date = dt.today()
+    return schema, parsing_date
 
 
 def text_redactor(data):
@@ -72,6 +73,8 @@ def lentaru_check():
     return pprint([i for i in db.find({})])
     # return pprint(check_dublicates[0].get('link'))
 
+test_list = []
+
 
 def yandex_check():
     db = db_connection()
@@ -84,9 +87,21 @@ def yandex_check():
         pub_name = pub.xpath(".//h2/text()")
         pub_link = pub.xpath(".//h2/..//@href")
         publisher = pub.xpath(".//a/text()")
-        pub_date = pub.xpath(".//a/text()")
-        # pprint(publisher)
-        pprint(pub_link)
+        pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
+        print(dir(pub_name))
+        print(len(pub_name))
+        # print(a = pub_name.count())
+        for i in range(len(pub_name)):
+        # print(pub_name[1])
+            pub_data = {
+                    'name': pub_name[i],
+                    'date': pub_date[i],
+                    'link': pub_link[i],
+                    'publisher': publisher[i]
+            }
+            test_list.append(pub_data)
+    pprint(dt.day)
+
     # return pprint(news_block)
 
 

@@ -24,7 +24,7 @@ def text_redactor(data):
 
 
 def lentaru_check():
-    db = db_connection()
+    db, parsing_data = db_connection()
     # db.delete_many({})  #turn on to clear database
     link = 'https://lenta.ru/'
     response = requests.get(link, headers=headers)
@@ -51,8 +51,8 @@ def lentaru_check():
         pub_link = link + pub.xpath("./../@href")[0]
         # for data in len(pub_name):
         db_id = db.count_documents({})
-        check_dublicates = [i for i in db.find({})]
-        if pub_link in [i.get('link') for i in check_dublicates]:
+        # check_dublicates = [i for i in db.find({})]
+        if pub_link in [news_link.get('link') for news_link in db.find({})]:
             continue
         else:
             db.insert_one({
@@ -77,7 +77,7 @@ test_list = []
 
 
 def yandex_check():
-    db = db_connection()
+    db, parsing_date = db_connection()
     link = 'https://yandex.ru/news/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
@@ -88,19 +88,33 @@ def yandex_check():
         pub_link = pub.xpath(".//h2/..//@href")
         publisher = pub.xpath(".//a/text()")
         pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
-        print(dir(pub_name))
-        print(len(pub_name))
-        # print(a = pub_name.count())
-        for i in range(len(pub_name)):
-        # print(pub_name[1])
-            pub_data = {
-                    'name': pub_name[i],
-                    'date': pub_date[i],
-                    'link': pub_link[i],
-                    'publisher': publisher[i]
-            }
-            test_list.append(pub_data)
-    pprint(dt.day)
+        # pprint(pub_link in [i.get('link') for i in check_dublicates])
+        # pprint(pub_link in [print(i.get('link')) for i in db.find({})])
+        # print(db_id)
+        # print('https://yandex.ru/news/story/U_sovershivshego_napadenie_v_Nicce_nashli_Koran_i_nozh--d3f77e5a2061b2fb7b49055f70826853?lang=ru&rubric=index&wan=1&stid=e237g94J-SF38RIGuDt-&t=1604036779&tt=true&persistent_id=117629178' == 'https://yandex.ru/news/story/U_sovershivshego_napadenie_v_Nicce_nashli_Koran_i_nozh--d3f77e5a2061b2fb7b49055f70826853?lang=ru&rubric=index&wan=1&stid=e237-SF3g94J8RIGadgT&t=1604037226&tt=true&persistent_id=117629178' )
+        # check_dublicates = [i for i in db.find({})]
+        for elem in range(len(pub_name)):
+            if pub_name[elem] in [news_name.get('name') for news_name in db.find({})]:
+                continue
+            else:
+
+                # print(str(parsing_date.date()) + ' ' + pub_date[i])
+                # print(pub_name[1])
+                db_id = db.count_documents({})
+                db.insert_one({
+                    '_id': db_id + 1,
+                    'name': pub_name[elem],
+                    'date': str(parsing_date.date()) + ', ' + pub_date[elem],
+                    'link': pub_link[elem],
+                    'publisher': publisher[elem]
+                })
+                # test_list.append(pub_data)
+
+        # print(dir(pub_name))
+        # print(len(pub_name))
+    # pprint(test_list)
+
+    return pprint([i for i in db.find({})])
 
     # return pprint(news_block)
 
@@ -108,5 +122,5 @@ def yandex_check():
 if __name__ == '__main__':
     # for i in
     # pprint(lenta_checker())
-    # lentaru_check()
+    lentaru_check()
     yandex_check()

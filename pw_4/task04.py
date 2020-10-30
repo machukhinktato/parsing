@@ -83,7 +83,7 @@ def yandex_check():
     dom = html.fromstring(response.text)
     news_block = dom.xpath("//div[@class='mg-grid__row mg-grid__row_gap_8 news-top-stories news-app__top']")
     for pub in news_block:
-        pub_data = {}
+        # pub_data = {}
         pub_name = pub.xpath(".//h2/text()")
         pub_link = pub.xpath(".//h2/..//@href")
         publisher = pub.xpath(".//a/text()")
@@ -119,8 +119,41 @@ def yandex_check():
     # return pprint(news_block)
 
 
+def mailru_check():
+    db, parsing_date = db_connection()
+    link = 'https://news.mail.ru/'
+    response = requests.get(link, headers=headers)
+    dom = html.fromstring(response.text)
+    news_block = dom.xpath("//table[@class='daynews__inner']//td[position()<3]")
+    # pprint(news_block)
+    pub_data = {}
+    for pub in news_block:
+        # pub_data = {}
+        pub_name = text_redactor(pub.xpath(".//span/text()"))
+        pub_link = pub.xpath(".//a/@href")
+        pub_date, publisher = None, None
+        for news_link in pub_link:
+            data_scrap = requests.get(news_link, headers=headers)
+            link_dom = html.fromstring(data_scrap.text)
+            # pub_date = link_dom.xpath("//div[@class='breadcrumbs breadcrumbs_article js-ago-wrapper']//span/@datetime")
+            pub_date = link_dom.xpath("//span/@datetime")
+            publisher = text_redactor(link_dom.xpath("//a[@class='link color_gray breadcrumbs__link']/span/text()"))
+            # for elem in link_block:
+            # pub_date = elem.xpath(".//span/@datetime")
+        pub_data = {
+            'name': pub_name,
+            'date': pub_date,
+            'link': pub_link,
+            'publisher': publisher
+        }
+        # publisher = pub.xpath(".//a/text()")
+        # pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
+        # pprint(pub_link)
+
+
 if __name__ == '__main__':
     # for i in
     # pprint(lenta_checker())
-    lentaru_check()
-    yandex_check()
+    # lentaru_check()
+    # yandex_check()
+    mailru_check()

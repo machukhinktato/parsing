@@ -125,13 +125,12 @@ def mailru_check():
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
     # news_block = dom.xpath("//table[@class='daynews__inner']//td[position()<3]")
-    news_block = dom.xpath("//a[contains(@class, 'js-topnews__item')]")
+    news_block = dom.xpath("//a[contains(@class, 'js-topnews__item')]/@href")
     # pprint(news_block)
     pub_data = {}
 
-
-    # for pub in news_block:
-
+    for pub in news_block:
+        pprint(pub)
 '''
         # pub_data = {}
         pub_name = text_redactor(pub.xpath(".//span[contains(@class, 'photo__title')]/text()"))
@@ -161,7 +160,7 @@ def mailru_check():
         # pprint(publisher)
         # for i in pub_name:
             # print(len(i))
-        print(pub_data)
+        # print(pub_data)
 if __name__ == '__main__':
     # for i in
     # pprint(lenta_checker())

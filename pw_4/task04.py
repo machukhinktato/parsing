@@ -124,33 +124,44 @@ def mailru_check():
     link = 'https://news.mail.ru/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
-    news_block = dom.xpath("//table[@class='daynews__inner']//td[position()<3]")
+    # news_block = dom.xpath("//table[@class='daynews__inner']//td[position()<3]")
+    news_block = dom.xpath("//a[contains(@class, 'js-topnews__item')]")
     # pprint(news_block)
     pub_data = {}
-    for pub in news_block:
+
+
+    # for pub in news_block:
+
+'''
         # pub_data = {}
-        pub_name = text_redactor(pub.xpath(".//span/text()"))
+        pub_name = text_redactor(pub.xpath(".//span[contains(@class, 'photo__title')]/text()"))
         pub_link = pub.xpath(".//a/@href")
-        pub_date, publisher = None, None
+        pub_date, publisher = [], []
         for news_link in pub_link:
             data_scrap = requests.get(news_link, headers=headers)
             link_dom = html.fromstring(data_scrap.text)
             # pub_date = link_dom.xpath("//div[@class='breadcrumbs breadcrumbs_article js-ago-wrapper']//span/@datetime")
-            pub_date = link_dom.xpath("//span/@datetime")
-            publisher = text_redactor(link_dom.xpath("//a[@class='link color_gray breadcrumbs__link']/span/text()"))
+            pub_date.append([i.split('+')[0] for i in link_dom.xpath("//span/@datetime")])
+            # print([i.split('+')[0] for i in link_dom.xpath("//span/@datetime")])
+            publisher.append(text_redactor(link_dom.xpath("//a[@class='link color_gray breadcrumbs__link']/span/text()")))
             # for elem in link_block:
             # pub_date = elem.xpath(".//span/@datetime")
-        pub_data = {
-            'name': pub_name,
-            'date': pub_date,
-            'link': pub_link,
-            'publisher': publisher
-        }
+        # for i in range(5):
+'''
+        #     pub_data = {
+        #         'name': pub_name,
+        #         'date': pub_date,
+        #         'link': pub_link,
+        #         'publisher': publisher
+        #     }
         # publisher = pub.xpath(".//a/text()")
         # pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
-        # pprint(pub_link)
-
-
+        # for i in range(len(pub_data)):
+        #     pprint(pub_data[i].get('name'))
+        # pprint(publisher)
+        # for i in pub_name:
+            # print(len(i))
+        print(pub_data)
 if __name__ == '__main__':
     # for i in
     # pprint(lenta_checker())

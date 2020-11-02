@@ -49,9 +49,6 @@ def lentaru_check():
     return pprint('lenta.ru scraping successfully done')
 
 
-test_list = []
-
-
 def yandex_check():
     db, parsing_date = db_connection()
     # db.delete_many({})  #turn on to clear database

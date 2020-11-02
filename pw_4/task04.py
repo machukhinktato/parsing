@@ -15,6 +15,7 @@ def db_connection():
     client = MongoClient('127.0.0.1', 27017)
     db = client['PW4']
     schema = db['news']
+
     parsing_date = dt.today()
     return schema, parsing_date
 
@@ -78,6 +79,7 @@ test_list = []
 
 def yandex_check():
     db, parsing_date = db_connection()
+    # db.delete_many({})  #turn on to clear database
     link = 'https://yandex.ru/news/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
@@ -121,6 +123,7 @@ def yandex_check():
 
 def mailru_check():
     db, parsing_date = db_connection()
+    # db.delete_many({})  #turn on to clear database
     link = 'https://news.mail.ru/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)

@@ -15,7 +15,6 @@ def db_connection():
     client = MongoClient('127.0.0.1', 27017)
     db = client['PW4']
     schema = db['news']
-
     parsing_date = dt.today()
     return schema, parsing_date
 

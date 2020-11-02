@@ -51,11 +51,11 @@ def lentaru_check():
         pub_date = text_redactor(pub.xpath("./@datetime"))
         pub_link = link + pub.xpath("./../@href")[0]
         # for data in len(pub_name):
-        db_id = db.count_documents({})
-        # check_dublicates = [i for i in db.find({})]
+
         if pub_link in [news_link.get('link') for news_link in db.find({})]:
             continue
         else:
+            db_id = db.count_documents({})
             db.insert_one({
                 '_id': db_id + 1,
                 'name': pub_name,
@@ -71,7 +71,7 @@ def lentaru_check():
         # }
         # news_data.append(pub_data)
     # return pprint(news_data)
-    return pprint([i for i in db.find({})])
+    return pprint('lenta.ru parsing successfully done')
     # return pprint(check_dublicates[0].get('link'))
 
 test_list = []
@@ -116,7 +116,7 @@ def yandex_check():
         # print(len(pub_name))
     # pprint(test_list)
 
-    return pprint([i for i in db.find({})])
+    return pprint('yandex.ru parsing successfully done')
 
     # return pprint(news_block)
 
@@ -160,7 +160,16 @@ def mailru_check():
                 'publisher': publisher
             })
 
-    return pprint([i for i in db.find({})])
+    return pprint('mail.ru parsing successfully done')
+
+
+def start_scraping():
+    db, pd = db_connection()
+    lentaru_check()
+    yandex_check()
+    mailru_check()
+    return pprint([elem for elem in db.find({})])
+
 
     # for pub in news_block:
     #     pprint(pub)
@@ -195,8 +204,7 @@ def mailru_check():
             # print(len(i))
         # print(pub_data)
 if __name__ == '__main__':
-    # for i in
-    # pprint(lenta_checker())
     # lentaru_check()
     # yandex_check()
-    mailru_check()
+    # mailru_check()
+    start_scraping()

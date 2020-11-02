@@ -31,27 +31,10 @@ def lentaru_check():
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
     news_block = dom.xpath("//time[@class='g-time']")
-    # data = dom.xpath("//div[@class='span4']//text()")
-    # news_name = dom.xpath("./time[@class='g-time']/../text()")
-    # news_name = news.
-    # news_link = dom.xpath("//time[@class='g-time']/@datetime")
-    # news_datepub = news.xpath("//@datetime")
-    # return print([i.replace(u'\xa0', u' ') for i in news_link])
-    # return pprint(news_name)
-    # pub_name, pub_date = [], []
-    news_data = []
     for pub in news_block:
-        pub_data = {}
-        # pb_name = pub.xpath("./../text()")
-        # pub_name.append(text_redactor(pub.xpath("./../text()")))
         pub_name = text_redactor(pub.xpath("./../text()"))
-        # pb_date = pub.xpath("./@datetime")
-        # publication.append([txt.replace(u'\xa0', u' ') for txt in pb_name])
-        # pub_date.append(text_redactor(pub.xpath("./@datetime")))
         pub_date = text_redactor(pub.xpath("./@datetime"))
         pub_link = link + pub.xpath("./../@href")[0]
-        # for data in len(pub_name):
-
         if pub_link in [news_link.get('link') for news_link in db.find({})]:
             continue
         else:
@@ -63,16 +46,9 @@ def lentaru_check():
                 'link': pub_link,
                 'publisher': 'lenta.ru'
             })
-        # pub_data = {
-        #     'name': pub_name,
-        #     'date': pub_date,
-        #     'link': pub_link,
-        #     'publisher': 'lenta.ru'
-        # }
-        # news_data.append(pub_data)
-    # return pprint(news_data)
-    return pprint('lenta.ru parsing successfully done')
-    # return pprint(check_dublicates[0].get('link'))
+
+    return pprint('lenta.ru scraping successfully done')
+
 
 test_list = []
 
@@ -85,23 +61,14 @@ def yandex_check():
     dom = html.fromstring(response.text)
     news_block = dom.xpath("//div[@class='mg-grid__row mg-grid__row_gap_8 news-top-stories news-app__top']")
     for pub in news_block:
-        # pub_data = {}
         pub_name = pub.xpath(".//h2/text()")
         pub_link = pub.xpath(".//h2/..//@href")
         publisher = pub.xpath(".//a/text()")
         pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
-        # pprint(pub_link in [i.get('link') for i in check_dublicates])
-        # pprint(pub_link in [print(i.get('link')) for i in db.find({})])
-        # print(db_id)
-        # print('https://yandex.ru/news/story/U_sovershivshego_napadenie_v_Nicce_nashli_Koran_i_nozh--d3f77e5a2061b2fb7b49055f70826853?lang=ru&rubric=index&wan=1&stid=e237g94J-SF38RIGuDt-&t=1604036779&tt=true&persistent_id=117629178' == 'https://yandex.ru/news/story/U_sovershivshego_napadenie_v_Nicce_nashli_Koran_i_nozh--d3f77e5a2061b2fb7b49055f70826853?lang=ru&rubric=index&wan=1&stid=e237-SF3g94J8RIGadgT&t=1604037226&tt=true&persistent_id=117629178' )
-        # check_dublicates = [i for i in db.find({})]
         for elem in range(len(pub_name)):
             if pub_name[elem] in [news_name.get('name') for news_name in db.find({})]:
                 continue
             else:
-
-                # print(str(parsing_date.date()) + ' ' + pub_date[i])
-                # print(pub_name[1])
                 db_id = db.count_documents({})
                 db.insert_one({
                     '_id': db_id + 1,
@@ -110,15 +77,8 @@ def yandex_check():
                     'link': pub_link[elem],
                     'publisher': publisher[elem]
                 })
-                # test_list.append(pub_data)
 
-        # print(dir(pub_name))
-        # print(len(pub_name))
-    # pprint(test_list)
-
-    return pprint('yandex.ru parsing successfully done')
-
-    # return pprint(news_block)
+    return pprint('yandex.ru scraping successfully done')
 
 
 def mailru_check():
@@ -127,9 +87,7 @@ def mailru_check():
     link = 'https://news.mail.ru/'
     response = requests.get(link, headers=headers)
     dom = html.fromstring(response.text)
-    # news_block = dom.xpath("//table[@class='daynews__inner']//td[position()<3]")
     news_links = dom.xpath("//a[contains(@class, 'js-topnews__item')]/@href")
-    pub_data = {}
     for news_link in news_links:
         request_data = requests.get(news_link, headers=headers)
         received_data = html.fromstring(request_data.text)
@@ -137,20 +95,9 @@ def mailru_check():
         pub_link = news_link
         pub_date = received_data.xpath("//span/@datetime")[0].split('+')
         publisher = received_data.xpath("//a[contains(@class, 'breadcrumbs')]/span/text()")
-        # pub_data = {
-        #     'name': pub_name,
-        #     'date': pub_date[0].replace('T', ' '),
-        #     'link': pub_link,
-        #     'publisher': publisher
-        # }
-        # pprint(pub_data)
-    # for elem in range(len(pub_link)):
         if pub_link in [news_links.get('link') for news_links in db.find({})]:
             continue
         else:
-
-            # print(str(parsing_date.date()) + ' ' + pub_date[i])
-            # print(pub_name[1])
             db_id = db.count_documents({})
             db.insert_one({
                 '_id': db_id + 1,
@@ -160,7 +107,7 @@ def mailru_check():
                 'publisher': publisher
             })
 
-    return pprint('mail.ru parsing successfully done')
+    return pprint('mail.ru scraping successfully done')
 
 
 def start_scraping():
@@ -168,43 +115,9 @@ def start_scraping():
     lentaru_check()
     yandex_check()
     mailru_check()
+
     return pprint([elem for elem in db.find({})])
 
 
-    # for pub in news_block:
-    #     pprint(pub)
-'''
-        # pub_data = {}
-        pub_name = text_redactor(pub.xpath(".//span[contains(@class, 'photo__title')]/text()"))
-        pub_link = pub.xpath(".//a/@href")
-        pub_date, publisher = [], []
-        for news_link in pub_link:
-            data_scrap = requests.get(news_link, headers=headers)
-            link_dom = html.fromstring(data_scrap.text)
-            # pub_date = link_dom.xpath("//div[@class='breadcrumbs breadcrumbs_article js-ago-wrapper']//span/@datetime")
-            pub_date.append([i.split('+')[0] for i in link_dom.xpath("//span/@datetime")])
-            # print([i.split('+')[0] for i in link_dom.xpath("//span/@datetime")])
-            publisher.append(text_redactor(link_dom.xpath("//a[@class='link color_gray breadcrumbs__link']/span/text()")))
-            # for elem in link_block:
-            # pub_date = elem.xpath(".//span/@datetime")
-        # for i in range(5):
-'''
-        #     pub_data = {
-        #         'name': pub_name,
-        #         'date': pub_date,
-        #         'link': pub_link,
-        #         'publisher': publisher
-        #     }
-        # publisher = pub.xpath(".//a/text()")
-        # pub_date = pub.xpath(".//span[@class='mg-card-source__time']/text()")
-        # for i in range(len(pub_data)):
-        #     pprint(pub_data[i].get('name'))
-        # pprint(publisher)
-        # for i in pub_name:
-            # print(len(i))
-        # print(pub_data)
 if __name__ == '__main__':
-    # lentaru_check()
-    # yandex_check()
-    # mailru_check()
     start_scraping()

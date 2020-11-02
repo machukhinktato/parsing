@@ -131,11 +131,12 @@ def mailru_check():
         received_data = html.fromstring(request_data.text)
         pub_name = received_data.xpath("//h1/text()")
         link = news_link
-        pub_date = received_data.xpath("//span/@datetime")[0].split('T')
+        pub_date = received_data.xpath("//span/@datetime")[0].split('+')
+        publisher = received_data.xpath("//a[contains(@class, 'breadcrumbs')]/span/text()")
 
-        pprint(pub_date)
-    print(type(news_links))
-    # pprint(news_block)
+        pprint(publisher)
+
+
     pub_data = {}
 
     # for pub in news_block:

@@ -134,15 +134,30 @@ def mailru_check():
         pub_link = news_link
         pub_date = received_data.xpath("//span/@datetime")[0].split('+')
         publisher = received_data.xpath("//a[contains(@class, 'breadcrumbs')]/span/text()")
-        pub_data = {
-            'name': pub_name,
-            'date': pub_date[0].replace('T', ' '),
-            'link': pub_link,
-            'publisher': publisher
-        }
-        pprint(pub_data)
+        # pub_data = {
+        #     'name': pub_name,
+        #     'date': pub_date[0].replace('T', ' '),
+        #     'link': pub_link,
+        #     'publisher': publisher
+        # }
+        # pprint(pub_data)
+    # for elem in range(len(pub_link)):
+        if pub_link in [news_links.get('link') for news_links in db.find({})]:
+            continue
+        else:
 
+            # print(str(parsing_date.date()) + ' ' + pub_date[i])
+            # print(pub_name[1])
+            db_id = db.count_documents({})
+            db.insert_one({
+                '_id': db_id + 1,
+                'name': pub_name,
+                'date': pub_date[0].replace('T', ' '),
+                'link': pub_link,
+                'publisher': publisher
+            })
 
+    return pprint([i for i in db.find({})])
 
     # for pub in news_block:
     #     pprint(pub)

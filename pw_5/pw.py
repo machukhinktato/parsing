@@ -23,10 +23,16 @@ login.send_keys(Keys.ENTER)
 
 
 psw = WebDriverWait(chrome, 20).until(
-    EC.visibility_of_element_located(By.ID, 'mailbox:password-input')
+    EC.visibility_of_element_located((By.ID, 'mailbox:password-input'))
 )
 psw.send_keys(PSW)
 psw.send_keys(Keys.ENTER)
 
-inbox = chrome.find_elements_by_class_name('nav__item_active')
-print(inbox)
+
+nav_menu = WebDriverWait(chrome,20).until(
+    EC.visibility_of_element_located((By.CLASS_NAME, 'sidebar__menu-item'))
+)
+nav_menu.click()
+
+# inbox = chrome.find_elements_by_class_name('nav__item_active')
+# print(inbox)

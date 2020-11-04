@@ -28,14 +28,3 @@ psw.send_keys(Keys.ENTER)
 time.sleep(5)
 inbox = chrome.find_elements_by_class_name('nav__item_active')
 print(inbox)
-# mail = chrome.find_element_by_tag_name('href')
-# print(mail)
-# [mail.click() for mail in mail]
-# for email in mail:
-#     print(f"fuckin {email.find_element_by_tag_name('href')}")
-# mail = chrome.find_elements_by_partial_link_text('/inbox/')
-# pprint(i.find_element_by_partial_link_text('/inbox/') for i in mail)
-# for email in mail:
-#     print(f"fuckin {email.find_element_by_partial_link_text('/inbox/')}")
-# print(chrome.find_element_by_xpath("//a[contains(@href, 'inbox')]"))
-# pprint(mail.text)

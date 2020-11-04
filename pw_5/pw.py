@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pprint import pprint
+import re
 import time
 from pw_5.data import LOGIN, PSW
 
@@ -28,13 +29,9 @@ psw = WebDriverWait(chrome, 20).until(
 psw.send_keys(PSW)
 psw.send_keys(Keys.ENTER)
 
-
-side_bar = WebDriverWait(chrome,20).until(
-    EC.visibility_of_element_located((By.CLASS_NAME, 'sidebar__menu-item'))
-)
-side_bar.click()
-
-
-inbox_element = WebDriverWait(driver, 30).until(
+inbox_element = WebDriverWait(chrome, 20).until(
     EC.visibility_of_element_located((By.CLASS_NAME,'nav__item_active'))
 )
+url_list = chrome.find_elements_by_class_name('js-letter-list-item')
+print([url.get_attribute('href') for url in url_list])
+print(len(url_list))

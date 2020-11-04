@@ -29,10 +29,12 @@ psw.send_keys(PSW)
 psw.send_keys(Keys.ENTER)
 
 
-nav_menu = WebDriverWait(chrome,20).until(
+side_bar = WebDriverWait(chrome,20).until(
     EC.visibility_of_element_located((By.CLASS_NAME, 'sidebar__menu-item'))
 )
-nav_menu.click()
+side_bar.click()
 
-# inbox = chrome.find_elements_by_class_name('nav__item_active')
-# print(inbox)
+
+inbox_element = WebDriverWait(driver, 30).until(
+    EC.visibility_of_element_located((By.CLASS_NAME,'nav__item_active'))
+)

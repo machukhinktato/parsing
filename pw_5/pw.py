@@ -15,7 +15,6 @@ chrome_options.add_argument('start-maximized')
 chrome = webdriver.Chrome(options=chrome_options)
 chrome.get('https://mail.ru/')
 
-# login = chrome.find_element_by_id('mailbox:login-input')
 login = WebDriverWait(chrome, 20).until(
     EC.visibility_of_element_located((By.ID, 'mailbox:login-input'))
 )
@@ -32,20 +31,21 @@ inbox_element = WebDriverWait(chrome, 20).until(
     EC.visibility_of_element_located((By.CLASS_NAME, 'nav__item_active'))
 )
 url_list = chrome.find_elements_by_class_name('js-letter-list-item')
-url_set = []
+# url_set = []
 # url_set.add([url.get_attribute('href') for url in url_list])
 list_of_links = []
-url_set = [url.get_attribute('href') for url in url_list]
+urls = [url.get_attribute('href') for url in url_list]
+print(type(urls))
 # for i in range(len(url_set)):
 
 # pprint(type(url_set[i]))
 
 # print(len(url_list))
-for i in range(len(url_set)):
+for i in range(len(urls)):
 #     read_status_elem = WebDriverWait(chrome, 10).until(
 #         EC.presence_of_element_located((By.CLASS_NAME, 'llc__read-status')))
     actions = ActionChains(chrome)
-    list_of_links.append(url_set[i])
+    list_of_links.append(urls[i])
 # letters = chrome.find_elements_by_class_name('js-letter-list-item')
 # for itm in letters:
 #     link = itm.get_attribute('href')

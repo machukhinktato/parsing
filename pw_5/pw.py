@@ -50,7 +50,11 @@ while True:
         body = chrome.find_element_by_class_name('letter-body').text
     except:
         body = None
-    emails.append({'Sender': sender, 'When sended': when_sended, 'Header': header, 'Body': body})
+    emails.append({
+        'Sender': sender,
+        'When sended': when_sended,
+        'Header': header,
+        'Body': body})
 
     button_next = WebDriverWait(chrome, 20).until(
         EC.visibility_of_element_located((By.CLASS_NAME, 'button2_arrow-down'))

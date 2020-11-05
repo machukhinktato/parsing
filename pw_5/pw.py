@@ -27,51 +27,69 @@ psw = WebDriverWait(chrome, 20).until(
 psw.send_keys(PSW)
 psw.send_keys(Keys.ENTER)
 
+
+# side_bar = WebDriverWait(chrome, 20).until(
+#     EC.visibility_of_element_located((By.CLASS_NAME,'sidebar__menu-ico'))
+# )
+# side_bar.click()
+
 inbox_element = WebDriverWait(chrome, 20).until(
     EC.visibility_of_element_located((By.CLASS_NAME, 'nav__item_active'))
+    # EC.visibility_of_element_located((By.LINK_TEXT, '/inbox/'))
 )
+
+
+banana = chrome.find_elements_by_xpath('//a[contains(title, "Входящие")]')
+# title = inbox_element.get_attribute('data-title')
+print(banana)
+print(type(banana))
+print(dir(banana))
+# html = chrome.find_element_by_tag_name('html')
+# for i in range(5):
+list_of_links = []
+# html.send_keys(Keys.PAGE_DOWN)
+# for i in range(25):
+                        # banana = True
+                        # while banana:
+                        #     read_status_elem = WebDriverWait(chrome, 10).until(
+                        #         EC.presence_of_element_located((By.CLASS_NAME, 'llc__read-status')))
+                        #     actions = ActionChains(chrome)
+                        #     letters = chrome.find_elements_by_class_name('js-letter-list-item')
+                        #     for itm in letters:
+                        #         link = itm.get_attribute('href')
+                        #         list_of_links.append(link)
+                        #     try:
+                        #         actions.move_to_element(letters[-1])
+                        #         actions.perform()
+                        #     except:
+                        #         banana = False
+                        #         break
+    # finally:
+    #     break
+
+# paginator = chrome.find_element_by_class_name('paginator-container__block')
+# print(paginator)
 url_list = chrome.find_elements_by_class_name('js-letter-list-item')
-# url_set = []
-# url_set.add([url.get_attribute('href') for url in url_list])
 list_of_links = []
 urls = [url.get_attribute('href') for url in url_list]
-print(type(urls))
-# for i in range(len(url_set)):
-
-# pprint(type(url_set[i]))
-
-# print(len(url_list))
-for i in range(len(urls)):
-#     read_status_elem = WebDriverWait(chrome, 10).until(
-#         EC.presence_of_element_located((By.CLASS_NAME, 'llc__read-status')))
-    actions = ActionChains(chrome)
-    list_of_links.append(urls[i])
-# letters = chrome.find_elements_by_class_name('js-letter-list-item')
-# for itm in letters:
-#     link = itm.get_attribute('href')
-#     list_of_links.append(link)
-
-    actions.move_to_element(url_list[-1])
-    actions.perform()
-# pprint(list_of_links)
-
-# list_tmp = []
-# for link in list_of_links:
-#     for elem in range(len(link)):
-#         print(itm[elem])
-# send_info = WebDriverWait(chrome, 10).until(
-#     EC.presence_of_element_located((By.CLASS_NAME, 'letter__author')))
-# sender = send_info.find_element_by_class_name('letter-contact').text
-# when_sended = send_info.find_element_by_class_name('letter__date').text
-# header = WebDriverWait(chrome, 10).until(
-#     EC.presence_of_element_located((By.TAG_NAME, 'h2'))).text
-# body = chrome.find_element_by_class_name('letter-body').text
-# list_tmp.append({'Sender': sender, 'When sended': when_sended, 'Header': header, 'Body': body})
-
-# collection.delete_many({})
-# collection.insert_many(list_tmp)
-# pprint(list_tmp)
-
+chrome.get(urls[0])
+time.sleep(1)
+while True:
+    # down_button = chrome.find_element_by_xpath('//span[@data-title="Следующее" or @title = "Следующее"]')
+    down_button = chrome.find_element_by_class_name('button2_arrow-down')
+    if not down_button.get_attribute('disabled'):
+        down_button.click()
+    else:
+        break
+# button2__wrapper
+# Keys.LEFT_CONTROL + Keys.PAGE_DOWN
+# next_button = WebDriverWait(chrome, 20).until(
+#     EC.visibility_of_element_located((By.CLASS_NAME, 'ico ico_16-arrow-down ico_size_s'))
+# )
+# print(next_button)
+# while True:
+    # next_button.send_keys(Keys.LEFT_CONTROL + Keys.PAGE_DOWN)
+# next_button.click()
 emails = []
 try:
     for a in list_of_links:
@@ -89,6 +107,6 @@ try:
         print(f"Обработана ссылка: {a}")
 except Exception as e:
     print(f'something going wrong\n {e}')
-finally:
-    chrome.close()
+# finally:
+    # chrome.close()
     # url_list = chrome.find_elements_by_class_name('js-letter-list-item')

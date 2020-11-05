@@ -6,8 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pprint import pprint
-import re
-import time
 from pw_5.data import LOGIN, PSW
 
 chrome_options = Options()
@@ -30,14 +28,11 @@ psw.send_keys(Keys.ENTER)
 inbox_element = WebDriverWait(chrome, 20).until(
     EC.visibility_of_element_located((By.CLASS_NAME, 'nav__item_active'))
 )
-# print(dir(inbox_element))
-# print(inbox_element.text)
-
 url_list = chrome.find_elements_by_class_name('js-letter-list-item')
-
 urls = [url.get_attribute('href') for url in url_list]
 chrome.get(urls[0])
 emails = []
+
 while True:
     send_info = WebDriverWait(chrome, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME, 'letter__author')))
@@ -56,17 +51,13 @@ while True:
     except:
         body = None
     emails.append({'Sender': sender, 'When sended': when_sended, 'Header': header, 'Body': body})
-    # print(email)
-    # print(f"Обработана ссылка: {a}")
-# except Exception as e:
-# print(f'something going wrong\n {e}')
 
-    down_button = WebDriverWait(chrome, 20).until(
+    button_next = WebDriverWait(chrome, 20).until(
         EC.visibility_of_element_located((By.CLASS_NAME, 'button2_arrow-down'))
     )
 
-    if not down_button.get_attribute('disabled'):
-        down_button.click()
+    if not button_next.get_attribute('disabled'):
+        button_next.click()
     else:
         break
 

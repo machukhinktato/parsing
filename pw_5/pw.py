@@ -70,25 +70,4 @@ while True:
     else:
         break
 
-print(emails)
-# emails = []
-# try:
-#     for a in list_of_links:
-#         chrome.get(a)
-#         letter_author_wrapper = WebDriverWait(chrome, 20).until(
-#             EC.presence_of_element_located((By.CLASS_NAME, 'letter__author'))
-#         )
-#
-#         email = {
-#             'letter_author': letter_author_wrapper.find_element_by_class_name('letter-contact').get_attribute('title'),
-#             'letter_date': letter_author_wrapper.find_element_by_class_name('letter__date').text,
-#             'letter_title': chrome.find_element_by_class_name('thread__subject').text,
-#             'letter_body': chrome.find_element_by_class_name('letter-body').text
-#         }
-#         emails.append(email)
-        # print(f"Обработана ссылка: {a}")
-# except Exception as e:
-#     print(f'something going wrong\n {e}')
-# finally:
-    # chrome.close()
-    # url_list = chrome.find_elements_by_class_name('js-letter-list-item')
+pprint(emails)

@@ -10,5 +10,13 @@ class HhruSpider(scrapy.Spider):
     target = 'search/vacancy?area=1&fromSearchLine=true&st=searchVacancy&text=Python&from=suggest_post'
 
     def parse(self, response:HtmlResponse):
-        links = response.xpath("//a[@class='bloko-link HH-LinkModifier']/@href").extract()
+        urls = response.xpath("//a[@class='bloko-link HH-LinkModifier']/@href").extract()
         next_page = response.xpath("//a[contains(@class,'HH-Pager-Controls-Next')]/@href").extract_first()
+        for url in urls:
+            yield response.follow(urls, callback=self.vacancy_parse)
+        if next_page:
+            yield response.follow(next_page, callback=self.parse)
+
+    def vacancy_parse(self, response:HtmlResponse):
+        name = response.xpath()
+        salary = response.xpath()

@@ -18,5 +18,7 @@ class HhruSpider(scrapy.Spider):
             yield response.follow(next_page, callback=self.parse)
 
     def vacancy_parse(self, response:HtmlResponse):
-        name = response.xpath()
-        salary = response.xpath()
+        name = response.xpath("//h1/text()").extract_first()
+        salary = response.xpath("//p/span[@data-qa='bloko-header-2']/text()").extract()
+
+        yield JobparserItem(name=name, salary=salary)

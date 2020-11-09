@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pprint import pprint
-from pw_5.data import LOGIN, PSW
+from pw_5_selenium.data import LOGIN, PSW
 
 chrome_options = Options()
 chrome_options.add_argument('start-maximized')
